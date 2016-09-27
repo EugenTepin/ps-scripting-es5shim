@@ -1,41 +1,45 @@
 /*
 TODO
-what need to shim?
+1) Make a list with functionality that need to patch [done]
+2) Get "blueprints" of these methods [done]
+3) Rewrite methods with Photoshop javascript environment and "blueprints" licences in mind
 
 Function
-Function.bind [done by mdn]
-
+• Function.bind [done]
 
 Object
-• Object.defineProperty
-• Object.defineProperties(obj, propName, descriptorSet)
-• Object.create(protoObj, descriptorSet)
-• Object.getOwnPropertyNames(obj)
-• Object.Prototype
-• Object.getPrototypeOf(obj)
-• Object.getOwnPropertyDescriptor
-• Object.getOwnPropertyNames
-• Object.preventExtensions
-• Object.isExtensible(obj)
-• Object.seal
-• Object.isSealed(obj)
-• Object.freeze
-• Object.isFrozen(obj)
-• Object.keys
+• Object.defineProperty [done]
+
+• Object.getOwnPropertyDescriptor [done]
+
+
+• Object.defineProperties 	 [done]
+• Object.create			  	 [done]
+• Object.getOwnPropertyNames [done]
+• Object.getPrototypeOf		 [done]
+• Object.setPrototypeOf 	 [done]
+• Object.preventExtensions   [done]
+• Object.isExtensible		 [done]
+• Object.seal 				 [done]
+• Object.isSealed(obj)		 [done]
+• Object.freeze 			 [done]
+• Object.isFrozen(obj)		 [done]
+• Object.keys 				 [done]
 
 Array
-• Array.prototype.indexOf
-• Array.prototype.lastIndexOf
-• Array.prototype.every
-• Array.prototype.some
-• Array.prototype.forEach
-• Array.prototype.map
-• Array.prototype.filter
-• Array.prototype.reduce
-• Array.prototype.reduceRight
+• Array.isArray					[done]
+• Array.prototype.indexOf 		[done]
+• Array.prototype.lastIndexOf	[done]
+• Array.prototype.every 		[done]
+• Array.prototype.some			[done]
+• Array.prototype.forEach		[done]
+• Array.prototype.map			[done]
+• Array.prototype.filter		[done]
+• Array.prototype.reduce 		[done]
+• Array.prototype.reduceRight	[done]
 
 JSON
-• JSON.stringify()
-• JSON.parse()
+• JSON.stringify
+• JSON.parse
 
 */
