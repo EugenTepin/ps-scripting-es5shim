@@ -43,3 +43,7 @@ JSON
 • JSON.parse
 
 */
+
+require('./lib/Function/bind.js');
+require('./lib/Array/_Array.js');
+require('./lib/Object/_Object.js');
