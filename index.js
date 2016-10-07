@@ -9,10 +9,7 @@ Function
 
 Object
 • Object.defineProperty [done]
-
 • Object.getOwnPropertyDescriptor [done]
-
-
 • Object.defineProperties 	 [done]
 • Object.create			  	 [done]
 • Object.getOwnPropertyNames [done]
@@ -38,12 +35,42 @@ Array
 • Array.prototype.reduce 		[done]
 • Array.prototype.reduceRight	[done]
 
-JSON
-• JSON.stringify
-• JSON.parse
+
+String
+• String.prototype.trim	
+
+Other
+• console.log
+• window
+
+
 
 */
 
-require('./lib/Function/bind.js');
-require('./lib/Array/_Array.js');
-require('./lib/Object/_Object.js');
+require('./lib/Array/every.js')
+require('./lib/Array/filter.js')
+require('./lib/Array/forEach.js')
+require('./lib/Array/indexOf.js')
+require('./lib/Array/isArray.js')
+require('./lib/Array/lastIndexOf.js')
+require('./lib/Array/map.js')
+require('./lib/Array/reduce.js')
+require('./lib/Array/reduceRight.js')
+require('./lib/Array/some.js')
+
+require('./lib/Function/bind.js')
+
+require('./lib/Object/create.js');
+require('./lib/Object/defineProperties.js');
+require('./lib/Object/defineProperty.js');
+require('./lib/Object/freeze.js');
+require('./lib/Object/getOwnPropertyDescriptor.js');
+require('./lib/Object/getOwnPropertyNames.js');
+require('./lib/Object/getPrototypeOf.js');
+require('./lib/Object/isExtensible.js');
+require('./lib/Object/isFrozen.js');
+require('./lib/Object/isSealed.js');
+require('./lib/Object/keys.js');
+require('./lib/Object/preventExtensions.js');
+require('./lib/Object/seal.js');
+require('./lib/Object/setPrototypeOf.js');
