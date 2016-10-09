@@ -8,22 +8,22 @@
     /******/
     // The require function
     /******/
-    function r(n) {
+    function r(o) {
         /******/
         /******/
         // Check if module is in cache
         /******/
-        if (t[n]) /******/
-        return t[n].exports;
+        if (t[o]) /******/
+        return t[o].exports;
         /******/
         /******/
         // Create a new module (and put it into the cache)
         /******/
-        var o = t[n] = {
+        var n = t[o] = {
             /******/
             exports: {},
             /******/
-            id: n,
+            id: o,
             /******/
             loaded: false
         };
@@ -31,17 +31,17 @@
         /******/
         // Execute the module function
         /******/
-        e[n].call(o.exports, o, o.exports, r);
+        e[o].call(n.exports, n, n.exports, r);
         /******/
         /******/
         // Flag the module as loaded
         /******/
-        o.loaded = true;
+        n.loaded = true;
         /******/
         /******/
         // Return the exports of the module
         /******/
-        return o.exports;
+        return n.exports;
     }
     /******/
     /******/
@@ -67,9 +67,590 @@
 })([ /* 0 */
 /***/
 function(e, t, r) {
-    r(1);
-    e.exports = r(29);
+    r(27);
+    e.exports = r(1);
 }, /* 1 */
+/***/
+function(e, t, r) {
+    r(2);
+    r(3);
+    r(4);
+    r(5);
+    r(6);
+    r(7);
+    r(8);
+    r(9);
+    r(10);
+    r(11);
+    r(12);
+    r(13);
+    r(15);
+    r(16);
+    r(17);
+    r(18);
+    r(19);
+    r(20);
+    r(21);
+    r(22);
+    r(23);
+    r(24);
+    r(25);
+    r(26);
+}, /* 2 */
+/***/
+function(e, t) {}, /* 3 */
+/***/
+function(e, t) {}, /* 4 */
+/***/
+function(e, t) {}, /* 5 */
+/***/
+function(e, t) {}, /* 6 */
+/***/
+function(e, t) {}, /* 7 */
+/***/
+function(e, t) {}, /* 8 */
+/***/
+function(e, t) {}, /* 9 */
+/***/
+function(e, t) {}, /* 10 */
+/***/
+function(e, t) {}, /* 11 */
+/***/
+function(e, t) {}, /* 12 */
+/***/
+function(e, t) {}, /* 13 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.create ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.create, [ "string" ], "Object.create(string)");
+    o(Object.create, [ void 0 ], "Object.create(undefined)");
+    o(Object.create, [ 1 ], "Object.create(number)");
+    n.log("");
+    o(Object.create, [ {}, {
+        a: "string"
+    } ], "Object.create(object, {a : string})");
+    o(Object.create, [ {}, {
+        a: {
+            set: function() {}
+        }
+    } ], "Object.create(object, {a : {set : function}})");
+    o(Object.create, [ {}, {
+        a: {
+            get: function() {}
+        }
+    } ], "Object.create(object, {a : {get : function}})");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    o(Object.create, [ {} ], "Object.create(object)");
+    var i = o(Object.create, [ {}, {
+        a: {
+            value: 125
+        }
+    } ], "Object.create(object,  {a : {value : 125}})");
+    n.log("     " + i.toSource());
+    o(Object.create, [ [ 1, 2, 3, 4, 5 ] ], "Object.create(array)");
+    o(Object.create, [ function() {} ], "Object.create(function)");
+    o(Object.create, [ new Date() ], "Object.create(date)");
+    o(Object.create, [ null ], "Object.create(null)");
+    /*acceptParams(Object.create, [new File()], "Object.create(File)");
+	acceptParams(Object.create, [new Folder()], "Object.create(Folder)");*/
+    n.log("");
+}, /* 14 */
+/***/
+function(e, t) {
+    if ($.writeln !== void 0) {
+        var r = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var r = window.console;
+    }
+    e.exports.acceptParams = function(e, t, o) {
+        var n;
+        try {
+            n = e.apply(null, t);
+            var i = true;
+        } catch (c) {
+            var i = false;
+        }
+        if (i) {
+            r.log(o + " [OK]");
+        } else {
+            r.log(o + " [Error]");
+        }
+        return n;
+    };
+}, /* 15 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.defineProperties ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.defineProperties, [ "string", {} ], "Object.defineProperties(string, object)");
+    o(Object.defineProperties, [ void 0, {} ], "Object.defineProperties(undefined, object)");
+    o(Object.defineProperties, [ 1, {} ], "Object.defineProperties(number, object)");
+    o(Object.defineProperties, [ null, {} ], "Object.defineProperties(null, object)");
+    o(Object.defineProperties, [ {} ], "Object.defineProperties(object)");
+    o(Object.defineProperties, [ [ 1, 2, 3, 4, 5 ], 1 ], "Object.defineProperties(array, number)");
+    o(Object.defineProperties, [ function() {}, "test" ], "Object.defineProperties(function, string)");
+    o(Object.defineProperties, [ new Date(), null ], "Object.defineProperties(date, null)");
+    n.log("");
+    o(Object.defineProperties, [ {}, {
+        a: "string"
+    } ], "Object.defineProperties(object, {a : string})");
+    o(Object.defineProperties, [ {}, {
+        a: {
+            set: function() {}
+        }
+    } ], "Object.defineProperties(object, {a : {set : function}})");
+    o(Object.defineProperties, [ {}, {
+        a: {
+            get: function() {}
+        }
+    } ], "Object.defineProperties(object, {a : {get : function}})");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    var i = o(Object.defineProperties, [ {}, {
+        a: {
+            value: 125
+        }
+    } ], "Object.defineProperties(object,  {a : {value : 125}})");
+    n.log("     " + i.toSource());
+    /*acceptParams(Object.defineProperties, [new File(),{}], "Object.defineProperties(File, object)");
+	acceptParams(Object.defineProperties, [new Folder(),{}], "Object.defineProperties(Folder, object)");*/
+    n.log("");
+}, /* 16 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.defineProperty ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.defineProperty, [ "string", "prop", "string" ], "Object.defineProperty(string, string, string)");
+    o(Object.defineProperty, [ void 0, "prop", "string" ], "Object.defineProperty(undefined, string, string)");
+    o(Object.defineProperty, [ 1, "prop", "string" ], "Object.defineProperty(number, string, string)");
+    o(Object.defineProperty, [ null, "prop", "string" ], "Object.defineProperty(null, string, string)");
+    o(Object.defineProperty, [ {}, "prop", "string" ], "Object.defineProperty(object, string, string)");
+    o(Object.defineProperty, [ {}, "prop", void 0 ], "Object.defineProperty(object, string, undefined)");
+    o(Object.defineProperty, [ {}, "prop", 1 ], "Object.defineProperty(object, string, number)");
+    o(Object.defineProperty, [ {}, "prop", null ], "Object.defineProperty(object, string, null)");
+    o(Object.defineProperty, [ {}, "prop", {
+        set: function() {}
+    } ], "Object.defineProperty(object, string, {set: function() {})");
+    o(Object.defineProperty, [ {}, "prop", {
+        get: function() {}
+    } ], "Object.defineProperty(object, string, {get: function() {})");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    var i = o(Object.defineProperty, [ {}, "prop", {
+        a: "test"
+    } ], "Object.defineProperty(object, 'prop', {a: 'test'})");
+    n.log("     " + i.toSource());
+    var c = o(Object.defineProperty, [ {}, "prop", {
+        value: "test"
+    } ], "Object.defineProperty(object, 'prop', {value: 'test'})");
+    n.log("     " + c.toSource());
+    var l = o(Object.defineProperty, [ [ 1, 2, 3, 4, 5 ], "prop", {
+        value: "test"
+    } ], "Object.defineProperty(array, 'prop', {value: 'test'})");
+    n.log("     " + l.prop);
+    var a = o(Object.defineProperty, [ function() {}, "prop", {
+        value: "test"
+    } ], "Object.defineProperty(function, 'prop', {value: 'test'})");
+    n.log("     " + a.prop);
+    var s = o(Object.defineProperty, [ new Date(), "prop", {
+        value: "test"
+    } ], "Object.defineProperty(date, 'prop', {value: 'test'})");
+    n.log("     " + s.prop);
+    /*var r5 = acceptParams(Object.defineProperty, [new File(), 'prop', {
+		value: 'test'
+	}], "Object.defineProperty(file, 'prop', {value: 'test'})");
+	console.log("     " + r5.prop);*/
+    n.log("");
+}, /* 17 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.freeze ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.freeze, [ "string" ], "Object.freeze(string)");
+    o(Object.freeze, [ void 0 ], "Object.freeze(undefined)");
+    o(Object.freeze, [ 1 ], "Object.freeze(number)");
+    o(Object.freeze, [ null ], "Object.freeze(null)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    o(Object.freeze, [ {} ], "Object.freeze(object)");
+    o(Object.freeze, [ [ 1, 2, 3, 4, 5 ] ], "Object.freeze(array)");
+    o(Object.freeze, [ function() {} ], "Object.freeze(function)");
+    o(Object.freeze, [ new Date() ], "Object.freeze(date)");
+    //acceptParams(Object.freeze, [new File()], "Object.freeze(File)");
+    //acceptParams(Object.freeze, [new Folder()], "Object.freeze(Folder)");
+    n.log("");
+}, /* 18 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.getOwnPropertyDescriptor ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.getOwnPropertyDescriptor, [ "string", "prop" ], "Object.getOwnPropertyDescriptor(string, prop)");
+    o(Object.getOwnPropertyDescriptor, [ void 0, "prop" ], "Object.getOwnPropertyDescriptor(undefined, prop)");
+    o(Object.getOwnPropertyDescriptor, [ 1, "prop" ], "Object.getOwnPropertyDescriptor(number, prop)");
+    o(Object.getOwnPropertyDescriptor, [ null, "prop" ], "Object.getOwnPropertyDescriptor(null, prop)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    var i = o(Object.getOwnPropertyDescriptor, [ {}, "prop" ], "Object.getOwnPropertyDescriptor({}, string)");
+    n.log("     " + i);
+    var c = o(Object.getOwnPropertyDescriptor, [ {}, void 0 ], "Object.getOwnPropertyDescriptor({}, undefined)");
+    n.log("     " + c);
+    var l = o(Object.getOwnPropertyDescriptor, [ {}, 1 ], "Object.getOwnPropertyDescriptor({}, number)");
+    n.log("     " + l);
+    var a = o(Object.getOwnPropertyDescriptor, [ {}, null ], "Object.getOwnPropertyDescriptor({}, null)");
+    n.log("     " + a);
+    var s = o(Object.getOwnPropertyDescriptor, [ {
+        a: 1
+    }, "a" ], "Object.getOwnPropertyDescriptor({a:1}, 'a')");
+    n.log("     " + s.toSource());
+    n.log("");
+}, /* 19 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.getOwnPropertyNames ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.getOwnPropertyNames, [ "string" ], "Object.getOwnPropertyNames(string)");
+    o(Object.getOwnPropertyNames, [ void 0 ], "Object.getOwnPropertyNames(undefined)");
+    o(Object.getOwnPropertyNames, [ 1 ], "Object.getOwnPropertyNames(number)");
+    o(Object.getOwnPropertyNames, [ null ], "Object.getOwnPropertyNames(null)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    o(Object.getOwnPropertyNames, [ {} ], "Object.getOwnPropertyNames(object)");
+    o(Object.getOwnPropertyNames, [ [ 1, 2, 3, 4, 5 ] ], "Object.getOwnPropertyNames(array)");
+    o(Object.getOwnPropertyNames, [ function() {} ], "Object.getOwnPropertyNames(function)");
+    o(Object.getOwnPropertyNames, [ new Date() ], "Object.getOwnPropertyNames(date)");
+    //acceptParams(Object.getOwnPropertyNames, [new File()], "Object.getOwnPropertyNames(File)");
+    //acceptParams(Object.getOwnPropertyNames, [new Folder()], "Object.getOwnPropertyNames(Folder)");
+    var i = o(Object.getOwnPropertyNames, [ Math ], "Object.getOwnPropertyNames(Math)");
+    n.log("     " + i);
+    n.log("");
+}, /* 20 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.getPrototypeOf ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.getPrototypeOf, [ "string" ], "Object.getPrototypeOf(string)");
+    o(Object.getPrototypeOf, [ void 0 ], "Object.getPrototypeOf(undefined)");
+    o(Object.getPrototypeOf, [ 1 ], "Object.getPrototypeOf(number)");
+    o(Object.getPrototypeOf, [ null ], "Object.getPrototypeOf(null)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    o(Object.getPrototypeOf, [ {} ], "Object.getPrototypeOf(object)");
+    o(Object.getPrototypeOf, [ [ 1, 2, 3, 4, 5 ] ], "Object.getPrototypeOf(array)");
+    o(Object.getPrototypeOf, [ function() {} ], "Object.getPrototypeOf(function)");
+    o(Object.getPrototypeOf, [ new Date() ], "Object.getPrototypeOf(date)");
+    /*acceptParams(Object.getPrototypeOf, [new File()], "Object.getPrototypeOf(File)");
+	acceptParams(Object.getPrototypeOf, [new Folder()], "Object.getPrototypeOf(Folder)");
+	
+	var r = acceptParams(Object.getPrototypeOf, [new Folder()], "Object.getPrototypeOf(Folder)");
+	console.log("     " + r);*/
+    n.log("");
+}, /* 21 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.isExtensible ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.isExtensible, [ "string" ], "Object.isExtensible(string)");
+    o(Object.isExtensible, [ void 0 ], "Object.isExtensible(undefined)");
+    o(Object.isExtensible, [ 1 ], "Object.isExtensible(number)");
+    o(Object.isExtensible, [ null ], "Object.isExtensible(null)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    var i = o(Object.isExtensible, [ {} ], "Object.isExtensible(object)");
+    n.log("     " + i);
+    var c = o(Object.isExtensible, [ [ 1, 2, 3, 4, 5 ] ], "Object.isExtensible(array)");
+    n.log("     " + c);
+    var l = o(Object.isExtensible, [ function() {} ], "Object.isExtensible(function)");
+    n.log("     " + l);
+    var a = o(Object.isExtensible, [ new Date() ], "Object.isExtensible(date)");
+    n.log("     " + a);
+    /*var r5 = acceptParams(Object.isExtensible, [new File()], "Object.isExtensible(File)");
+	console.log("     " + r5);
+	var r6 = acceptParams(Object.isExtensible, [new Folder()], "Object.isExtensible(Folder)");
+	console.log("     " + r6);*/
+    n.log("");
+}, /* 22 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.isFrozen ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.isFrozen, [ "string" ], "Object.isFrozen(string)");
+    o(Object.isFrozen, [ void 0 ], "Object.isFrozen(undefined)");
+    o(Object.isFrozen, [ 1 ], "Object.isFrozen(number)");
+    o(Object.isFrozen, [ null ], "Object.isFrozen(null)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    var i = o(Object.isFrozen, [ {} ], "Object.isFrozen(object)");
+    n.log("     " + i);
+    var c = o(Object.isFrozen, [ [ 1, 2, 3, 4, 5 ] ], "Object.isFrozen(array)");
+    n.log("     " + c);
+    var l = o(Object.isFrozen, [ function() {} ], "Object.isFrozen(function)");
+    n.log("     " + l);
+    var a = o(Object.isFrozen, [ new Date() ], "Object.isFrozen(date)");
+    n.log("     " + a);
+    /*var r5 = acceptParams(Object.isFrozen, [new File()], "Object.isFrozen(File)");
+	console.log("     " + r5);
+	var r6 = acceptParams(Object.isFrozen, [new Folder()], "Object.isFrozen(Folder)");
+	console.log("     " + r6);*/
+    n.log("");
+}, /* 23 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.isSealed ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.isSealed, [ "string" ], "Object.isSealed(string)");
+    o(Object.isSealed, [ void 0 ], "Object.isSealed(undefined)");
+    o(Object.isSealed, [ 1 ], "Object.isSealed(number)");
+    o(Object.isSealed, [ null ], "Object.isSealed(null)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    var i = o(Object.isSealed, [ {} ], "Object.isSealed(object)");
+    n.log("     " + i);
+    var c = o(Object.isSealed, [ [ 1, 2, 3, 4, 5 ] ], "Object.isSealed(array)");
+    n.log("     " + c);
+    var l = o(Object.isSealed, [ function() {} ], "Object.isSealed(function)");
+    n.log("     " + l);
+    var a = o(Object.isSealed, [ new Date() ], "Object.isSealed(date)");
+    n.log("     " + a);
+    /*var r5 = acceptParams(Object.isSealed, [new File()], "Object.isSealed(File)");
+	console.log("     " + r5);
+	var r6 = acceptParams(Object.isSealed, [new Folder()], "Object.isSealed(Folder)");
+	console.log("     " + r6);*/
+    n.log("");
+}, /* 24 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.keys ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.keys, [ "string" ], "Object.keys(string)");
+    o(Object.keys, [ void 0 ], "Object.keys(undefined)");
+    o(Object.keys, [ 1 ], "Object.keys(number)");
+    o(Object.keys, [ null ], "Object.keys(null)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    o(Object.keys, [ {} ], "Object.keys(object)");
+    o(Object.keys, [ [ 1, 2, 3, 4, 5 ] ], "Object.keys(array)");
+    o(Object.keys, [ function() {} ], "Object.keys(function)");
+    o(Object.keys, [ new Date() ], "Object.keys(date)");
+    //acceptParams(Object.keys, [new File()], "Object.keys(File)");
+    //acceptParams(Object.keys, [new Folder()], "Object.keys(Folder)");
+    var i = o(Object.keys, [ {
+        a: 1,
+        b: 2
+    } ], "Object.keys({a:1,b:2})");
+    n.log("     " + i);
+    n.log("");
+}, /* 25 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.preventExtensions ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.preventExtensions, [ "string" ], "Object.preventExtensions(string)");
+    o(Object.preventExtensions, [ void 0 ], "Object.preventExtensions(undefined)");
+    o(Object.preventExtensions, [ 1 ], "Object.preventExtensions(number)");
+    o(Object.preventExtensions, [ null ], "Object.preventExtensions(null)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    o(Object.preventExtensions, [ {} ], "Object.preventExtensions(object)");
+    o(Object.preventExtensions, [ [ 1, 2, 3, 4, 5 ] ], "Object.preventExtensions(array)");
+    o(Object.preventExtensions, [ function() {} ], "Object.preventExtensions(function)");
+    o(Object.preventExtensions, [ new Date() ], "Object.preventExtensions(date)");
+    //acceptParams(Object.preventExtensions, [new File()], "Object.preventExtensions(File)");
+    //acceptParams(Object.preventExtensions, [new Folder()], "Object.preventExtensions(Folder)");
+    n.log("");
+}, /* 26 */
+/***/
+function(e, t, r) {
+    var o = r(14).acceptParams;
+    if ($.writeln !== void 0) {
+        var n = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var n = window.console;
+    }
+    n.log("================== Object.seal ==================");
+    n.log("");
+    n.log("+++++++ The following should produce Error. +++++++");
+    n.log("");
+    o(Object.seal, [ "string" ], "Object.seal(string)");
+    o(Object.seal, [ void 0 ], "Object.seal(undefined)");
+    o(Object.seal, [ 1 ], "Object.seal(number)");
+    o(Object.seal, [ null ], "Object.seal(null)");
+    n.log("");
+    n.log("+++++++ The following should be OK. +++++++");
+    n.log("");
+    o(Object.seal, [ {} ], "Object.seal(object)");
+    o(Object.seal, [ [ 1, 2, 3, 4, 5 ] ], "Object.seal(array)");
+    o(Object.seal, [ function() {} ], "Object.seal(function)");
+    o(Object.seal, [ new Date() ], "Object.seal(date)");
+    //acceptParams(Object.seal, [new File()], "Object.seal(File)");
+    //acceptParams(Object.seal, [new Folder()], "Object.seal(Folder)");
+    n.log("");
+}, /* 27 */
 /***/
 function(e, t, r) {
     /*
@@ -83,15 +664,11 @@ function(e, t, r) {
 	
 	Object
 	• Object.defineProperty [done]
-	
 	• Object.getOwnPropertyDescriptor [done]
-	
-	
 	• Object.defineProperties 	 [done]
 	• Object.create			  	 [done]
 	• Object.getOwnPropertyNames [done]
 	• Object.getPrototypeOf		 [done]
-	• Object.setPrototypeOf 	 [done]
 	• Object.preventExtensions   [done]
 	• Object.isExtensible		 [done]
 	• Object.seal 				 [done]
@@ -112,55 +689,42 @@ function(e, t, r) {
 	• Array.prototype.reduce 		[done]
 	• Array.prototype.reduceRight	[done]
 	
-	JSON
-	• JSON.stringify
-	• JSON.parse
+	
+	String
+	• String.prototype.trim	
+	
+	Other
+	• console.log
+	• window
+	
+	
 	
 	*/
-    r(2);
-    r(3);
-    r(14);
-}, /* 2 */
-/***/
-function(e, t) {
-    /*
-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Polyfill
-	
-	WARNING! Bound functions used as constructors NOT supported by this polyfill!
-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors
-	*/
-    if (!Function.prototype.bind) {
-        Function.prototype.bind = function(e) {
-            if (typeof this !== "function") {
-                // closest thing possible to the ECMAScript 5
-                // internal IsCallable function
-                throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
-            }
-            var t = Array.prototype.slice.call(arguments, 1), r = this, n = function() {}, o = function() {
-                return r.apply(this instanceof n ? this : e, t.concat(Array.prototype.slice.call(arguments)));
-            };
-            if (this.prototype) {
-                // Function.prototype doesn't have a prototype property
-                n.prototype = this.prototype;
-            }
-            o.prototype = new n();
-            return o;
-        };
-    }
-}, /* 3 */
-/***/
-function(e, t, r) {
-    r(4);
-    r(5);
-    r(6);
-    r(7);
-    r(8);
-    r(9);
-    r(10);
-    r(11);
-    r(12);
-    r(13);
-}, /* 4 */
+    r(28);
+    r(29);
+    r(30);
+    r(31);
+    r(32);
+    r(33);
+    r(34);
+    r(35);
+    r(36);
+    r(37);
+    r(38);
+    r(39);
+    r(40);
+    r(41);
+    r(42);
+    r(43);
+    r(44);
+    r(45);
+    r(46);
+    r(47);
+    r(48);
+    r(49);
+    r(50);
+    r(51);
+}, /* 28 */
 /***/
 function(e, t) {
     /*
@@ -168,91 +732,87 @@ function(e, t) {
 	*/
     if (!Array.prototype.every) {
         Array.prototype.every = function(e, t) {
-            "use strict";
-            var r, n;
-            if (this == null) {
-                throw new TypeError("this is null or not defined");
+            var r, o;
+            if (this === void 0 || this === null) {
+                throw new TypeError("Array.prototype.every called on null or undefined");
             }
             // 1. Let O be the result of calling ToObject passing the this 
             //    value as the argument.
-            var o = Object(this);
+            var n = Object(this);
             // 2. Let lenValue be the result of calling the Get internal method
             //    of O with the argument "length".
             // 3. Let len be ToUint32(lenValue).
-            var i = o.length >>> 0;
-            // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
-            if (typeof e !== "function") {
-                throw new TypeError();
+            var i = n.length >>> 0;
+            // 4. If IsCallable(callback) is false, throw a TypeError exception.
+            if (e.__class__ !== "Function") {
+                throw new TypeError(e + " is not a function");
             }
             // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-            if (arguments.length > 1) {
-                r = t;
-            }
+            r = arguments.length > 1 ? t : void 0;
             // 6. Let k be 0.
-            n = 0;
+            o = 0;
             // 7. Repeat, while k < len
-            while (n < i) {
-                var f;
+            while (o < i) {
+                var c;
                 // a. Let Pk be ToString(k).
                 //   This is implicit for LHS operands of the in operator
                 // b. Let kPresent be the result of calling the HasProperty internal 
                 //    method of O with argument Pk.
                 //   This step can be combined with c
                 // c. If kPresent is true, then
-                if (n in o) {
+                if (o in n) {
                     // i. Let kValue be the result of calling the Get internal method
                     //    of O with argument Pk.
-                    f = o[n];
+                    c = n[o];
                     // ii. Let testResult be the result of calling the Call internal method
-                    //     of callbackfn with T as the this value and argument list 
+                    //     of callback with T as the this value and argument list 
                     //     containing kValue, k, and O.
-                    var c = e.call(r, f, n, o);
+                    var l = e.call(r, c, o, n);
                     // iii. If ToBoolean(testResult) is false, return false.
-                    if (!c) {
+                    if (!l) {
                         return false;
                     }
                 }
-                n++;
+                o++;
             }
             return true;
         };
     }
-}, /* 5 */
+}, /* 29 */
 /***/
 function(e, t) {
     /*
 	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 	*/
     if (!Array.prototype.filter) {
-        Array.prototype.filter = function(e) {
-            "use strict";
+        Array.prototype.filter = function(e, t) {
             if (this === void 0 || this === null) {
-                throw new TypeError();
+                throw new TypeError("Array.prototype.filter called on null or undefined");
             }
-            var t = Object(this);
-            var r = t.length >>> 0;
-            if (typeof e !== "function") {
-                throw new TypeError();
+            var r = Object(this);
+            var o = r.length >>> 0;
+            if (e.__class__ !== "Function") {
+                throw new TypeError(e + " is not a function");
             }
             var n = [];
-            var o = arguments.length >= 2 ? arguments[1] : void 0;
-            for (var i = 0; i < r; i++) {
-                if (i in t) {
-                    var f = t[i];
+            var i = arguments.length > 1 ? t : void 0;
+            for (var c = 0; c < o; c++) {
+                if (c in r) {
+                    var l = r[c];
                     // NOTE: Technically this should Object.defineProperty at
                     //       the next index, as push can be affected by
                     //       properties on Object.prototype and Array.prototype.
                     //       But that method's new, and collisions should be
                     //       rare, so use the more-compatible alternative.
-                    if (e.call(o, f, i, t)) {
-                        n.push(f);
+                    if (e.call(i, l, c, r)) {
+                        n.push(l);
                     }
                 }
             }
             return n;
         };
     }
-}, /* 6 */
+}, /* 30 */
 /***/
 function(e, t) {
     /*
@@ -262,52 +822,47 @@ function(e, t) {
     // Reference: http://es5.github.io/#x15.4.4.18
     if (!Array.prototype.forEach) {
         Array.prototype.forEach = function(e, t) {
-            var r, n;
-            if (this === null) {
-                throw new TypeError(" this is null or not defined");
+            if (this === void 0 || this === null) {
+                throw new TypeError("Array.prototype.forEach called on null or undefined");
             }
             // 1. Let O be the result of calling toObject() passing the
             // |this| value as the argument.
-            var o = Object(this);
+            var r = Object(this);
             // 2. Let lenValue be the result of calling the Get() internal
             // method of O with the argument "length".
             // 3. Let len be toUint32(lenValue).
-            var i = o.length >>> 0;
+            var o = r.length >>> 0;
             // 4. If isCallable(callback) is false, throw a TypeError exception. 
             // See: http://es5.github.com/#x9.11
-            if (typeof e !== "function") {
+            if (e.__class__ !== "Function") {
                 throw new TypeError(e + " is not a function");
             }
             // 5. If thisArg was supplied, let T be thisArg; else let
             // T be undefined.
-            if (arguments.length > 1) {
-                r = t;
-            }
+            var n = arguments.length > 1 ? t : void 0;
             // 6. Let k be 0
-            n = 0;
+            i = 0;
             // 7. Repeat, while k < len
-            while (n < i) {
-                var f;
+            for (var i = 0; i < o; i++) {
+                var c;
                 // a. Let Pk be ToString(k).
                 //    This is implicit for LHS operands of the in operator
                 // b. Let kPresent be the result of calling the HasProperty
                 //    internal method of O with argument Pk.
                 //    This step can be combined with c
                 // c. If kPresent is true, then
-                if (n in o) {
+                if (i in r) {
                     // i. Let kValue be the result of calling the Get internal
                     // method of O with argument Pk.
-                    f = o[n];
+                    c = r[i];
                     // ii. Call the Call internal method of callback with T as
                     // the this value and argument list containing kValue, k, and O.
-                    e.call(r, f, n, o);
+                    e.call(n, c, i, r);
                 }
-                // d. Increase k by 1.
-                n++;
             }
         };
     }
-}, /* 7 */
+}, /* 31 */
 /***/
 function(e, t) {
     /*
@@ -320,16 +875,16 @@ function(e, t) {
             var r;
             // 1. Let o be the result of calling ToObject passing
             //    the this value as the argument.
-            if (this == null) {
-                throw new TypeError('"this" is null or not defined');
+            if (this === void 0 || this === null) {
+                throw new TypeError("Array.prototype.indexOf called on null or undefined");
             }
-            var n = Object(this);
+            var o = Object(this);
             // 2. Let lenValue be the result of calling the Get
             //    internal method of o with the argument "length".
             // 3. Let len be ToUint32(lenValue).
-            var o = n.length >>> 0;
+            var n = o.length >>> 0;
             // 4. If len is 0, return -1.
-            if (o === 0) {
+            if (n === 0) {
                 return -1;
             }
             // 5. If argument fromIndex was passed let n be
@@ -339,15 +894,15 @@ function(e, t) {
                 i = 0;
             }
             // 6. If n >= len, return -1.
-            if (i >= o) {
+            if (i >= n) {
                 return -1;
             }
             // 7. If n >= 0, then Let k be n.
             // 8. Else, n<0, Let k be len - abs(n).
             //    If k is less than 0, then let k be 0.
-            r = Math.max(i >= 0 ? i : o - Math.abs(i), 0);
+            r = Math.max(i >= 0 ? i : n - Math.abs(i), 0);
             // 9. Repeat, while k < len
-            while (r < o) {
+            while (r < n) {
                 // a. Let Pk be ToString(k).
                 //   This is implicit for LHS operands of the in operator
                 // b. Let kPresent be the result of calling the
@@ -360,7 +915,7 @@ function(e, t) {
                 //        Strict Equality Comparison Algorithm to
                 //        searchElement and elementK.
                 //  iii.  If same is true, return k.
-                if (r in n && n[r] === e) {
+                if (r in o && o[r] === e) {
                     return r;
                 }
                 r++;
@@ -368,7 +923,7 @@ function(e, t) {
             return -1;
         };
     }
-}, /* 8 */
+}, /* 32 */
 /***/
 function(e, t) {
     /*
@@ -376,10 +931,13 @@ function(e, t) {
 	*/
     if (!Array.isArray) {
         Array.isArray = function(e) {
-            return Object.prototype.toString.call(e) === "[object Array]";
+            if (e === void 0 || e === null) {
+                return false;
+            }
+            return e.__class__ === "Array";
         };
     }
-}, /* 9 */
+}, /* 33 */
 /***/
 function(e, t) {
     /*
@@ -388,33 +946,32 @@ function(e, t) {
     // Production steps of ECMA-262, Edition 5, 15.4.4.15
     // Reference: http://es5.github.io/#x15.4.4.15
     if (!Array.prototype.lastIndexOf) {
-        Array.prototype.lastIndexOf = function(e) {
-            "use strict";
+        Array.prototype.lastIndexOf = function(e, t) {
             if (this === void 0 || this === null) {
-                throw new TypeError();
+                throw new TypeError("Array.prototype.lastIndexOf called on null or undefined");
             }
-            var t, r, n = Object(this), o = n.length >>> 0;
-            if (o === 0) {
+            var r, o, n = Object(this), i = n.length >>> 0;
+            if (i === 0) {
                 return -1;
             }
-            t = o - 1;
+            r = i - 1;
             if (arguments.length > 1) {
-                t = Number(arguments[1]);
-                if (t != t) {
-                    t = 0;
-                } else if (t != 0 && t != 1 / 0 && t != -(1 / 0)) {
-                    t = (t > 0 || -1) * Math.floor(Math.abs(t));
+                r = Number(arguments[1]);
+                if (r != r) {
+                    r = 0;
+                } else if (r != 0 && r != Infinity && r != -Infinity) {
+                    r = (r > 0 || -1) * Math.floor(Math.abs(r));
                 }
             }
-            for (r = t >= 0 ? Math.min(t, o - 1) : o - Math.abs(t); r >= 0; r--) {
-                if (r in n && n[r] === e) {
-                    return r;
+            for (o = r >= 0 ? Math.min(r, i - 1) : i - Math.abs(r); o >= 0; o--) {
+                if (o in n && n[o] === e) {
+                    return o;
                 }
             }
             return -1;
         };
     }
-}, /* 10 */
+}, /* 34 */
 /***/
 function(e, t) {
     /*
@@ -424,9 +981,9 @@ function(e, t) {
     // Reference: http://es5.github.io/#x15.4.4.19
     if (!Array.prototype.map) {
         Array.prototype.map = function(e, t) {
-            var r, n, o;
-            if (this == null) {
-                throw new TypeError(" this is null or not defined");
+            var r, o, n;
+            if (this === void 0 || this === null) {
+                throw new TypeError("Array.prototype.map called on null or undefined");
             }
             // 1. Let O be the result of calling ToObject passing the |this| 
             //    value as the argument.
@@ -434,39 +991,34 @@ function(e, t) {
             // 2. Let lenValue be the result of calling the Get internal 
             //    method of O with the argument "length".
             // 3. Let len be ToUint32(lenValue).
-            var f = i.length >>> 0;
+            var c = i.length >>> 0;
             // 4. If IsCallable(callback) is false, throw a TypeError exception.
             // See: http://es5.github.com/#x9.11
-            if (typeof e !== "function") {
+            if (e.__class__ !== "Function") {
                 throw new TypeError(e + " is not a function");
             }
             // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
-            if (arguments.length > 1) {
-                r = t;
-            }
+            r = arguments.length > 1 ? t : void 0;
             // 6. Let A be a new array created as if by the expression new Array(len) 
             //    where Array is the standard built-in constructor with that name and 
             //    len is the value of len.
-            n = new Array(f);
-            // 7. Let k be 0
-            o = 0;
-            // 8. Repeat, while k < len
-            while (o < f) {
-                var c, a;
+            o = new Array(c);
+            for (var n = 0; n < c; n++) {
+                var l, a;
                 // a. Let Pk be ToString(k).
                 //   This is implicit for LHS operands of the in operator
                 // b. Let kPresent be the result of calling the HasProperty internal 
                 //    method of O with argument Pk.
                 //   This step can be combined with c
                 // c. If kPresent is true, then
-                if (o in i) {
+                if (n in i) {
                     // i. Let kValue be the result of calling the Get internal 
                     //    method of O with argument Pk.
-                    c = i[o];
+                    l = i[n];
                     // ii. Let mappedValue be the result of calling the Call internal 
                     //     method of callback with T as the this value and argument 
                     //     list containing kValue, k, and O.
-                    a = e.call(r, c, o, i);
+                    a = e.call(r, l, n, i);
                     // iii. Call the DefineOwnProperty internal method of A with arguments
                     // Pk, Property Descriptor
                     // { Value: mappedValue,
@@ -482,16 +1034,14 @@ function(e, t) {
                     //   configurable: true
                     // });
                     // For best browser support, use the following:
-                    n[o] = a;
+                    o[n] = a;
                 }
-                // d. Increase k by 1.
-                o++;
             }
             // 9. return A
-            return n;
+            return o;
         };
     }
-}, /* 11 */
+}, /* 35 */
 /***/
 function(e, t) {
     /*
@@ -500,35 +1050,34 @@ function(e, t) {
     // Production steps of ECMA-262, Edition 5, 15.4.4.21
     // Reference: http://es5.github.io/#x15.4.4.21
     if (!Array.prototype.reduce) {
-        Array.prototype.reduce = function(e) {
-            "use strict";
-            if (this === null) {
+        Array.prototype.reduce = function(e, t) {
+            if (this === void 0 || this === null) {
                 throw new TypeError("Array.prototype.reduce called on null or undefined");
             }
-            if (typeof e !== "function") {
+            if (e.__class__ !== "Function") {
                 throw new TypeError(e + " is not a function");
             }
-            var t = Object(this), r = t.length >>> 0, n = 0, o;
-            if (arguments.length == 2) {
-                o = arguments[1];
+            var r = Object(this), o = r.length >>> 0, n = 0, i;
+            if (arguments.length > 1) {
+                i = t;
             } else {
-                while (n < r && !(n in t)) {
+                while (n < o && !(n in r)) {
                     n++;
                 }
-                if (n >= r) {
+                if (n >= o) {
                     throw new TypeError("Reduce of empty array with no initial value");
                 }
-                o = t[n++];
+                i = r[n++];
             }
-            for (;n < r; n++) {
-                if (n in t) {
-                    o = e(o, t[n], n, t);
+            for (;n < o; n++) {
+                if (n in r) {
+                    i = e(i, r[n], n, r);
                 }
             }
-            return o;
+            return i;
         };
     }
-}, /* 12 */
+}, /* 36 */
 /***/
 function(e, t) {
     /*
@@ -536,36 +1085,35 @@ function(e, t) {
 	*/
     // Production steps of ECMA-262, Edition 5, 15.4.4.22
     // Reference: http://es5.github.io/#x15.4.4.22
-    if ("function" !== typeof Array.prototype.reduceRight) {
-        Array.prototype.reduceRight = function(e) {
-            "use strict";
-            if (null === this || "undefined" === typeof this) {
-                throw new TypeError("Array.prototype.reduce called on null or undefined");
+    if (!Array.prototype.reduceRight) {
+        Array.prototype.reduceRight = function(e, t) {
+            if (this === void 0 || this === null) {
+                throw new TypeError("Array.prototype.reduceRight called on null or undefined");
             }
-            if ("function" !== typeof e) {
+            if (e.__class__ !== "Function") {
                 throw new TypeError(e + " is not a function");
             }
-            var t = Object(this), r = t.length >>> 0, n = r - 1, o;
-            if (arguments.length >= 2) {
-                o = arguments[1];
+            var r = Object(this), o = r.length >>> 0, n = o - 1, i;
+            if (arguments.length > 1) {
+                i = t;
             } else {
-                while (n >= 0 && !(n in t)) {
+                while (n >= 0 && !(n in r)) {
                     n--;
                 }
                 if (n < 0) {
                     throw new TypeError("Reduce of empty array with no initial value");
                 }
-                o = t[n--];
+                i = r[n--];
             }
             for (;n >= 0; n--) {
-                if (n in t) {
-                    o = e(o, t[n], n, t);
+                if (n in r) {
+                    i = e(i, r[n], n, r);
                 }
             }
-            return o;
+            return i;
         };
     }
-}, /* 13 */
+}, /* 37 */
 /***/
 function(e, t) {
     /*
@@ -574,142 +1122,185 @@ function(e, t) {
     // Production steps of ECMA-262, Edition 5, 15.4.4.17
     // Reference: http://es5.github.io/#x15.4.4.17
     if (!Array.prototype.some) {
-        Array.prototype.some = function(e) {
-            "use strict";
-            if (this == null) {
+        Array.prototype.some = function(e, t) {
+            if (this === void 0 || this === null) {
                 throw new TypeError("Array.prototype.some called on null or undefined");
             }
-            if (typeof e !== "function") {
-                throw new TypeError();
+            if (e.__class__ !== "Function") {
+                throw new TypeError(e + " is not a function");
             }
-            var t = Object(this);
-            var r = t.length >>> 0;
-            var n = arguments.length >= 2 ? arguments[1] : void 0;
-            for (var o = 0; o < r; o++) {
-                if (o in t && e.call(n, t[o], o, t)) {
+            var r = Object(this);
+            var o = r.length >>> 0;
+            var n = arguments.length > 1 ? t : void 0;
+            for (var i = 0; i < o; i++) {
+                if (i in r && e.call(n, r[i], i, r)) {
                     return true;
                 }
             }
             return false;
         };
     }
-}, /* 14 */
-/***/
-function(e, t, r) {
-    r(15);
-    r(16);
-    r(17);
-    r(18);
-    r(19);
-    r(20);
-    r(21);
-    r(22);
-    r(23);
-    r(24);
-    r(25);
-    r(26);
-    r(27);
-    r(28);
-}, /* 15 */
+}, /* 38 */
 /***/
 function(e, t) {
     /*
-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Polyfill
+	
+	WARNING! Bound functions used as constructors NOT supported by this polyfill!
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors
 	*/
+    if (!Function.prototype.bind) {
+        Function.prototype.bind = function(e) {
+            if (this.__class__ !== "Function") {
+                throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+            }
+            var t = Array.prototype.slice.call(arguments, 1), r = this, o = function() {}, n = function() {
+                return r.apply(this instanceof o ? this : e, t.concat(Array.prototype.slice.call(arguments)));
+            };
+            if (this.prototype) {
+                // Function.prototype doesn't have a prototype property
+                o.prototype = this.prototype;
+            }
+            n.prototype = new o();
+            return n;
+        };
+    }
+}, /* 39 */
+/***/
+function(e, t) {
     if (!Object.create) {
-        Object.create = function(e) {
-            var t = function() {};
-            return function(r, n) {
-                if (r !== Object(r) && r !== null) {
-                    throw TypeError("Argument must be an object, or null");
+        // Production steps of ECMA-262, Edition 5, 15.2.3.5
+        // Reference: http://es5.github.io/#x15.2.3.5
+        Object.create = function() {
+            // To save on memory, use a shared constructor
+            function e() {}
+            // make a safe reference to Object.prototype.hasOwnProperty
+            var t = Object.prototype.hasOwnProperty;
+            return function(r) {
+                // 1. If Type(O) is not Object or Null throw a TypeError exception.
+                if (Object(r) !== r && r !== null) {
+                    throw TypeError("Object prototype may only be an Object or null");
                 }
-                t.prototype = r || {};
-                var o = new t();
-                t.prototype = null;
-                if (n !== e) {
-                    Object.defineProperties(o, n);
+                // 2. Let obj be the result of creating a new object as if by the
+                //    expression new Object() where Object is the standard built-in
+                //    constructor with that name
+                // 3. Set the [[Prototype]] internal property of obj to O.
+                e.prototype = r;
+                var o = new e();
+                e.prototype = null;
+                // Let's not keep a stray reference to O...
+                // 4. If the argument Properties is present and not undefined, add
+                //    own properties to obj as if by calling the standard built-in
+                //    function Object.defineProperties with arguments obj and
+                //    Properties.
+                if (arguments.length > 1) {
+                    // Object.defineProperties does ToObject on its first argument.
+                    var n = Object(arguments[1]);
+                    for (var i in n) {
+                        if (t.call(n, i)) {
+                            var c = n[i];
+                            if (Object(c) !== c) {
+                                throw TypeError(i + "must be an object");
+                            }
+                            if ("get" in c || "set" in c) {
+                                throw new TypeError("getters & setters can not be defined on this javascript engine");
+                            }
+                            if ("value" in c) {
+                                o[i] = n[i];
+                            }
+                        }
+                    }
                 }
-                // to imitate the case of Object.create(null)
-                if (r === null) {
-                    o.__proto__ = null;
-                }
+                // 5. Return obj
                 return o;
             };
         }();
     }
-}, /* 16 */
+}, /* 40 */
 /***/
 function(e, t) {
     /*
 	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties#Polyfill
 	*/
     if (!Object.defineProperties) {
-        function r(e, t) {
-            function r(e) {
-                function t(e, t) {
-                    return Object.prototype.hasOwnProperty.call(e, t);
-                }
-                function r(e) {
-                    // NB: modify as necessary if other values than functions are callable.
-                    return typeof e === "function";
-                }
-                if (typeof e !== "object" || e === null) throw new TypeError("bad desc");
-                var n = {};
-                if (t(e, "enumerable")) n.enumerable = !!e.enumerable;
-                if (t(e, "configurable")) n.configurable = !!e.configurable;
-                if (t(e, "value")) n.value = e.value;
-                if (t(e, "writable")) n.writable = !!e.writable;
-                if (t(e, "get")) {
-                    var o = e.get;
-                    if (!r(o) && typeof o !== "undefined") throw new TypeError("bad get");
-                    n.get = o;
-                }
-                if (t(e, "set")) {
-                    var i = e.set;
-                    if (!r(i) && typeof i !== "undefined") throw new TypeError("bad set");
-                    n.set = i;
-                }
-                if (("get" in n || "set" in n) && ("value" in n || "writable" in n)) throw new TypeError("identity-confused descriptor");
-                return n;
+        Object.defineProperties = function(e, t) {
+            function r(e, t) {
+                return Object.prototype.hasOwnProperty.call(e, t);
             }
-            if (typeof e !== "object" || e === null) throw new TypeError("bad obj");
-            t = Object(t);
-            var n = Object.keys(t);
-            var o = [];
-            for (var i = 0; i < n.length; i++) o.push([ n[i], r(t[n[i]]) ]);
-            for (var i = 0; i < o.length; i++) Object.defineProperty(e, o[i][0], o[i][1]);
+            function o(e) {
+                if (Object(e) !== e) {
+                    throw new TypeError("Descriptor can only be an Object.");
+                }
+                var t = {};
+                if (r(e, "enumerable")) {
+                    t.enumerable = !!e.enumerable;
+                }
+                if (r(e, "configurable")) {
+                    t.configurable = !!e.configurable;
+                }
+                if (r(e, "value")) {
+                    t.value = e.value;
+                }
+                if (r(e, "writable")) {
+                    t.writable = !!e.writable;
+                }
+                if (r(e, "get")) {
+                    throw new TypeError("getters & setters can not be defined on this javascript engine");
+                }
+                if (r(e, "set")) {
+                    throw new TypeError("getters & setters can not be defined on this javascript engine");
+                }
+                return t;
+            }
+            if (Object(e) !== e) {
+                throw new TypeError("Object.defineProperties can only be called on Objects.");
+            }
+            if (Object(t) !== t) {
+                throw new TypeError("Properties can only be an Object.");
+            }
+            var n = Object(t);
+            for (propName in n) {
+                if (hasOwnProperty.call(n, propName)) {
+                    var i = o(n[propName]);
+                    e[propName] = i.value;
+                }
+            }
             return e;
-        }
-        Object.defineProperties = r;
+        };
     }
-}, /* 17 */
+}, /* 41 */
 /***/
 function(e, t) {
     if (!Object.defineProperty) {
-        Object.defineProperty = function r(e, t, n) {
+        Object.defineProperty = function r(e, t, o) {
             if (Object(e) !== e) {
                 throw new TypeError("Object.defineProperty can only be called on Objects.");
             }
-            if (Object(n) !== n) {
+            if (Object(o) !== o) {
                 throw new TypeError("Property description can only be an Object.");
             }
-            if ("get" in n || "set" in n) {
+            if ("get" in o || "set" in o) {
                 throw new TypeError("getters & setters can not be defined on this javascript engine");
             }
             // If it's a data property.
-            if ("value" in n) {
+            if ("value" in o) {
                 // fail silently if 'writable', 'enumerable', or 'configurable'
                 // are requested but not supported
-                // can't implement these features; allow false but not true
-                if ("writable" in n && !n.writable || "enumerable" in n && !n.enumerable || "configurable" in n && !n.configurable) {
-                    throw new RangeError("This implementation of Object.defineProperty does not support configurable, enumerable, or writable properties SET to FALSE.");
-                }
-                e[t] = n.value;
-                return e;
+                // can't implement these features; allow true but not false
+                /* if ( 
+	                     ('writable' in descriptor && !descriptor.writable) ||
+	                     ('enumerable' in descriptor && !descriptor.enumerable) ||
+	                     ('configurable' in descriptor && !descriptor.configurable)
+	                 )
+	                     {
+	                         throw new RangeError('This implementation of Object.defineProperty does not support configurable, enumerable, or writable properties SET to FALSE.');
+	                     }*/
+                e[t] = o.value;
             }
+            return e;
         };
     }
-}, /* 18 */
+}, /* 42 */
 /***/
 function(e, t) {
     /*
@@ -728,7 +1319,7 @@ function(e, t) {
             return e;
         };
     }
-}, /* 19 */
+}, /* 43 */
 /***/
 function(e, t) {
     if (!Object.getOwnPropertyDescriptor) {
@@ -745,33 +1336,41 @@ function(e, t) {
                 configurable: true
             };
             r.value = e[t];
-            var n = e.reflect.find(t).type;
-            r.writable = n === "readwrite";
+            var o = e.reflect.find(t).type;
+            r.writable = o === "readwrite";
             return r;
         };
     }
-}, /* 20 */
+}, /* 44 */
 /***/
 function(e, t) {
     if (!Object.getOwnPropertyNames) {
         Object.getOwnPropertyNames = function r(e) {
-            var t = e.reflect.properties;
-            var r = [];
-            for (var n = 0; n < t.length; n++) {
-                r.push(t[n].name);
+            if (Object(e) !== e) {
+                throw new TypeError("Object.getOwnPropertyNames can only be called on Objects.");
             }
-            return r;
+            var t = e.reflect.properties;
+            var r = e.reflect.methods;
+            var o = r.concat(t);
+            var n = [];
+            for (var i = 0; i < o.length; i++) {
+                n.push(o[i].name);
+            }
+            return n;
         };
     }
-}, /* 21 */
+}, /* 45 */
 /***/
 function(e, t) {
     if (!Object.getPrototypeOf) {
         Object.getPrototypeOf = function(e) {
+            if (Object(e) !== e) {
+                throw new TypeError("Object.getPrototypeOf can only be called on Objects.");
+            }
             return e.__proto__;
         };
     }
-}, /* 22 */
+}, /* 46 */
 /***/
 function(e, t) {
     // ES5 15.2.3.13
@@ -784,7 +1383,7 @@ function(e, t) {
             return true;
         };
     }
-}, /* 23 */
+}, /* 47 */
 /***/
 function(e, t) {
     /*
@@ -800,7 +1399,7 @@ function(e, t) {
             return false;
         };
     }
-}, /* 24 */
+}, /* 48 */
 /***/
 function(e, t) {
     /*
@@ -816,7 +1415,7 @@ function(e, t) {
             return false;
         };
     }
-}, /* 25 */
+}, /* 49 */
 /***/
 function(e, t) {
     /*
@@ -827,23 +1426,22 @@ function(e, t) {
 	*/
     if (!Object.keys) {
         Object.keys = function() {
-            "use strict";
             var e = Object.prototype.hasOwnProperty;
             return function(t) {
-                if (typeof t !== "object" && (typeof t !== "function" || t === null)) {
-                    throw new TypeError("Object.keys called on non-object");
+                if (Object(t) !== t) {
+                    throw new TypeError("Object.keys can only be called on Objects.");
                 }
-                var r = [], n, o;
-                for (n in t) {
-                    if (e.call(t, n)) {
-                        r.push(n);
+                var r = [], o, n;
+                for (o in t) {
+                    if (e.call(t, o)) {
+                        r.push(o);
                     }
                 }
                 return r;
             };
         }();
     }
-}, /* 26 */
+}, /* 50 */
 /***/
 function(e, t) {
     /*
@@ -862,7 +1460,7 @@ function(e, t) {
             return e;
         };
     }
-}, /* 27 */
+}, /* 51 */
 /***/
 function(e, t) {
     /*
@@ -881,30 +1479,4 @@ function(e, t) {
             return e;
         };
     }
-}, /* 28 */
-/***/
-function(e, t) {
-    if (!Object.setPrototypeOf) {
-        Object.setPrototypeOf = function(e, t) {
-            e.__proto__ = t;
-            return e;
-        };
-    }
-}, /* 29 */
-/***/
-function(e, t) {
-    /*
-	Tests are here.
-	
-	*/
-    var r = {};
-    r.log = function(e) {
-        $.writeln(e);
-    };
-    function n(e, t, n) {
-        r.log("a[" + t + "] = " + e);
-    }
-    // Notice that index 2 is skipped since there is no item at
-    // that position in the array.
-    [ 2, 5, , 9 ].forEach(n);
 } ]);

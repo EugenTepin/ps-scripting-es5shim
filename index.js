@@ -14,7 +14,6 @@ Object
 • Object.create			  	 [done]
 • Object.getOwnPropertyNames [done]
 • Object.getPrototypeOf		 [done]
-• Object.setPrototypeOf 	 [done]
 • Object.preventExtensions   [done]
 • Object.isExtensible		 [done]
 • Object.seal 				 [done]
@@ -73,4 +72,3 @@ require('./lib/Object/isSealed.js');
 require('./lib/Object/keys.js');
 require('./lib/Object/preventExtensions.js');
 require('./lib/Object/seal.js');
-require('./lib/Object/setPrototypeOf.js');

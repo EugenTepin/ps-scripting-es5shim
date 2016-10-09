@@ -45,7 +45,8 @@ Icon?
 
 # Тесты и окружение для них
 test
-webpack.config.js
+tmp
+
 
 project.sublime-project
 project.sublime-workspace

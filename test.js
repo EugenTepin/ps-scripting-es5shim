@@ -1,26 +1,26 @@
-/*
-Tests are here.
+require('./test/Array/every.js')
+require('./test/Array/filter.js')
+require('./test/Array/forEach.js')
+require('./test/Array/indexOf.js')
+require('./test/Array/isArray.js')
+require('./test/Array/lastIndexOf.js')
+require('./test/Array/map.js')
+require('./test/Array/reduce.js')
+require('./test/Array/reduceRight.js')
+require('./test/Array/some.js')
 
-*/
-var console = {};
-console.log = function(obj){
-	$.writeln(obj);
-}
+require('./test/Function/bind.js')
 
-/*
-Example taken from:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-*/
-
-function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element);
-}
-
-// Notice that index 2 is skipped since there is no item at
-// that position in the array. (If you launch this script in Photoshop CS6 
-// you will see that it prints a[2] = undefined in console)
-[2, 5, , 9].forEach(logArrayElements);
-// logs:
-// a[0] = 2
-// a[1] = 5
-// a[3] = 9
+require('./test/Object/create.js');
+require('./test/Object/defineProperties.js');
+require('./test/Object/defineProperty.js');
+require('./test/Object/freeze.js');
+require('./test/Object/getOwnPropertyDescriptor.js');
+require('./test/Object/getOwnPropertyNames.js');
+require('./test/Object/getPrototypeOf.js');
+require('./test/Object/isExtensible.js');
+require('./test/Object/isFrozen.js');
+require('./test/Object/isSealed.js');
+require('./test/Object/keys.js');
+require('./test/Object/preventExtensions.js');
+require('./test/Object/seal.js');
