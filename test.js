@@ -1,3 +1,5 @@
+require('./test/String/trim.js')
+
 require('./test/Array/every.js')
 require('./test/Array/filter.js')
 require('./test/Array/forEach.js')

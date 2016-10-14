@@ -45,6 +45,7 @@ Other
 
 
 */
+require('./lib/String/trim.js')
 
 require('./lib/Array/every.js')
 require('./lib/Array/filter.js')

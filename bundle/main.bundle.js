@@ -144,6 +144,7 @@ function(e, r, t) {
 	
 	
 	*/
+    t(52);
     t(28);
     t(29);
     t(30);
@@ -285,7 +286,7 @@ function(e, r) {
             // T be undefined.
             var o = arguments.length > 1 ? r : void 0;
             // 6. Let k be 0
-            i = 0;
+            //k = 0;
             // 7. Repeat, while k < len
             for (var i = 0; i < n; i++) {
                 var c;
@@ -316,12 +317,12 @@ function(e, r) {
     // Reference: http://es5.github.io/#x15.4.4.14
     if (!Array.prototype.indexOf) {
         Array.prototype.indexOf = function(e, r) {
-            var t;
             // 1. Let o be the result of calling ToObject passing
             //    the this value as the argument.
             if (this === void 0 || this === null) {
                 throw new TypeError("Array.prototype.indexOf called on null or undefined");
             }
+            var t;
             var n = Object(this);
             // 2. Let lenValue be the result of calling the Get
             //    internal method of o with the argument "length".
@@ -921,6 +922,18 @@ function(e, r) {
             // allows "securable" code to "gracefully" degrade to working
             // but insecure code.
             return e;
+        };
+    }
+}, /* 52 */
+/***/
+function(e, r) {
+    /*
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+	*/
+    if (!String.prototype.trim) {
+        // Вырезаем BOM и неразрывный пробел
+        String.prototype.trim = function() {
+            return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
         };
     }
 } ]);

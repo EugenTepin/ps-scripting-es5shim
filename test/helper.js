@@ -10,10 +10,10 @@ if ($.writeln !== void 0) {
 
 
 
-module.exports.acceptParams = function(func, params, name) {
+module.exports.acceptParams = function(func, params, name, thisParam) {
 	var output;
 	try {
-		output = func.apply(null, params);
+		output = func.apply(thisParam, params);
 		var result = true;
 	} catch (e) {
 		var result = false;
@@ -28,4 +28,4 @@ module.exports.acceptParams = function(func, params, name) {
 
 
 /*Test Data*/
-//var testArrayDigits = [-100, 55, 0, 95, 0, 43, -145, 3, 9, 16];
+module.exports.testArray = [-100, 55, 0, 95, 0, 43, -145, 3, 9, 16];
