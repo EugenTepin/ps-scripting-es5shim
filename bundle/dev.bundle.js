@@ -8,22 +8,22 @@
     /******/
     // The require function
     /******/
-    function t(o) {
+    function o(t) {
         /******/
         /******/
         // Check if module is in cache
         /******/
-        if (r[o]) /******/
-        return r[o].exports;
+        if (r[t]) /******/
+        return r[t].exports;
         /******/
         /******/
         // Create a new module (and put it into the cache)
         /******/
-        var n = r[o] = {
+        var n = r[t] = {
             /******/
             exports: {},
             /******/
-            id: o,
+            id: t,
             /******/
             loaded: false
         };
@@ -31,7 +31,7 @@
         /******/
         // Execute the module function
         /******/
-        e[o].call(n.exports, n, n.exports, t);
+        e[t].call(n.exports, n, n.exports, o);
         /******/
         /******/
         // Flag the module as loaded
@@ -48,91 +48,29 @@
     /******/
     // expose the modules object (__webpack_modules__)
     /******/
-    t.m = e;
+    o.m = e;
     /******/
     /******/
     // expose the module cache
     /******/
-    t.c = r;
+    o.c = r;
     /******/
     /******/
     // __webpack_public_path__
     /******/
-    t.p = "";
+    o.p = "";
     /******/
     /******/
     // Load entry module and return exports
     /******/
-    return t(0);
+    return o(0);
 })([ /* 0 */
 /***/
-function(e, r, t) {
-    e.exports = t(1);
+function(e, r, o) {
+    e.exports = o(1);
 }, /* 1 */
 /***/
-function(e, r, t) {
-    t(53);
-    t(2);
-    t(4);
-    t(5);
-    t(6);
-    t(7);
-    t(8);
-    t(9);
-    t(10);
-    t(11);
-    t(12);
-    t(13);
-    t(14);
-    t(15);
-    t(16);
-    t(17);
-    t(18);
-    t(19);
-    t(20);
-    t(21);
-    t(22);
-    t(23);
-    t(24);
-    t(25);
-    t(26);
-}, /* 2 */
-/***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
-    if ($.writeln !== void 0) {
-        var l = {
-            log: function(e) {
-                $.writeln(e);
-            }
-        };
-    } else {
-        var l = window.console;
-    }
-    var i = function(e, r, t) {
-        return typeof e === "number";
-    };
-    l.log("================== Array.prototype.every ==================");
-    l.log("");
-    l.log("+++++++ The following should produce Error. +++++++");
-    l.log("");
-    o(Array.prototype.every, [ "string" ], "Array.prototype.every(string)", n);
-    o(Array.prototype.every, [ void 0 ], "Array.prototype.every(undefined)", n);
-    o(Array.prototype.every, [ 1 ], "Array.prototype.every(number)", n);
-    o(Array.prototype.every, i, "Array.prototype.every(callback)", null);
-    o(Array.prototype.every, i, "Array.prototype.every(callback)", void 0);
-    l.log("");
-    l.log("");
-    l.log("+++++++ The following should be OK. +++++++");
-    l.log("");
-    var c = o(Array.prototype.every, [ i ], "Array.prototype.every(callback)", n);
-    l.log(c);
-    l.log(n);
-    l.log("");
-}, /* 3 */
-/***/
-function(e, r) {
+function(e, r, o) {
     if ($.writeln !== void 0) {
         var t = {
             log: function(e) {
@@ -142,28 +80,44 @@ function(e, r) {
     } else {
         var t = window.console;
     }
-    e.exports.acceptParams = function(e, r, o, n) {
-        var l;
-        try {
-            l = e.apply(n, r);
-            var i = true;
-        } catch (c) {
-            var i = false;
-        }
-        if (i) {
-            t.log(o + " [OK]");
-        } else {
-            t.log(o + " [Error]");
-        }
-        return l;
-    };
-    /*Test Data*/
-    e.exports.testArray = [ -100, 55, 0, 95, 0, 43, -145, 3, 9, 16 ];
-}, /* 4 */
+    t.log($.os);
+    try {
+        t.log(app.name + " " + app.build);
+    } catch (n) {
+        t.log(app.name + " " + app.version);
+    }
+    //console.log(app.name + ' ' + app.build || app.version);
+    t.log("Javascript version " + $.version);
+    o(2);
+    o(4);
+    o(5);
+    o(6);
+    o(7);
+    o(8);
+    o(9);
+    o(10);
+    o(11);
+    o(12);
+    o(13);
+    o(14);
+    o(15);
+    o(16);
+    o(17);
+    o(18);
+    o(19);
+    o(20);
+    o(21);
+    o(22);
+    o(23);
+    o(24);
+    o(25);
+    o(26);
+    o(27);
+}, /* 2 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -173,31 +127,116 @@ function(e, r, t) {
     } else {
         var l = window.console;
     }
-    var i = function(e, r, t) {
+    l.log("================== String.prototype.trim ==================");
+    l.log("");
+    l.log("+++++++ The following should be OK. +++++++");
+    l.log("");
+    var i = "   foo  ";
+    l.log(i.trim());
+    // 'foo'
+    l.log("");
+}, /* 3 */
+/***/
+function(e, r) {
+    if ($.writeln !== void 0) {
+        var o = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var o = window.console;
+    }
+    e.exports.acceptParams = function(e, r, t, n) {
+        var l;
+        try {
+            l = e.apply(n, r);
+            var i = true;
+        } catch (c) {
+            var i = false;
+        }
+        if (i) {
+            o.log(t + " [OK]");
+        } else {
+            o.log(t + " [Error]");
+        }
+        return l;
+    };
+    /*Test Data*/
+    e.exports.testArray = [ -100, 55, 0, 95, 0, 43, -145, 3, 9, 16 ];
+}, /* 4 */
+/***/
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
+    if ($.writeln !== void 0) {
+        var l = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var l = window.console;
+    }
+    var i = function(e, r, o) {
+        return typeof e === "number";
+    };
+    l.log("================== Array.prototype.every ==================");
+    l.log("");
+    l.log("+++++++ The following should produce Error. +++++++");
+    l.log("");
+    t(Array.prototype.every, [ "string" ], "Array.prototype.every(string)", n);
+    t(Array.prototype.every, [ void 0 ], "Array.prototype.every(undefined)", n);
+    t(Array.prototype.every, [ 1 ], "Array.prototype.every(number)", n);
+    t(Array.prototype.every, i, "Array.prototype.every(callback)", null);
+    t(Array.prototype.every, i, "Array.prototype.every(callback)", void 0);
+    l.log("");
+    l.log("");
+    l.log("+++++++ The following should be OK. +++++++");
+    l.log("");
+    var c = t(Array.prototype.every, [ i ], "Array.prototype.every(callback)", n);
+    l.log(c);
+    l.log(n);
+    l.log("");
+}, /* 5 */
+/***/
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
+    if ($.writeln !== void 0) {
+        var l = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var l = window.console;
+    }
+    var i = function(e, r, o) {
         return e > 0;
     };
     l.log("================== Array.prototype.filter ==================");
     l.log("");
     l.log("+++++++ The following should produce Error. +++++++");
     l.log("");
-    o(Array.prototype.filter, [ "string" ], "Array.prototype.filter(string)", n);
-    o(Array.prototype.filter, [ void 0 ], "Array.prototype.filter(undefined)", n);
-    o(Array.prototype.filter, [ 1 ], "Array.prototype.filter(number)", n);
-    o(Array.prototype.filter, i, "Array.prototype.filter(callback)", null);
-    o(Array.prototype.filter, i, "Array.prototype.filter(callback)", void 0);
+    t(Array.prototype.filter, [ "string" ], "Array.prototype.filter(string)", n);
+    t(Array.prototype.filter, [ void 0 ], "Array.prototype.filter(undefined)", n);
+    t(Array.prototype.filter, [ 1 ], "Array.prototype.filter(number)", n);
+    t(Array.prototype.filter, i, "Array.prototype.filter(callback)", null);
+    t(Array.prototype.filter, i, "Array.prototype.filter(callback)", void 0);
     l.log("");
     l.log("");
     l.log("+++++++ The following should be OK. +++++++");
     l.log("");
-    var c = o(Array.prototype.filter, [ i ], "Array.prototype.filter(callback)", n);
+    var c = t(Array.prototype.filter, [ i ], "Array.prototype.filter(callback)", n);
     l.log(c);
     l.log(n);
     l.log("");
-}, /* 5 */
+}, /* 6 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -208,29 +247,29 @@ function(e, r, t) {
         var l = window.console;
     }
     var i = [];
-    var c = function(e, r, t) {
+    var c = function(e, r, o) {
         i.push(Math.abs(e));
     };
     l.log("================== Array.prototype.forEach ==================");
     l.log("");
     l.log("+++++++ The following should produce Error. +++++++");
     l.log("");
-    o(Array.prototype.forEach, [ "string" ], "Array.prototype.forEach(string)", n);
-    o(Array.prototype.forEach, [ void 0 ], "Array.prototype.forEach(undefined)", n);
-    o(Array.prototype.forEach, [ 1 ], "Array.prototype.forEach(number)", n);
+    t(Array.prototype.forEach, [ "string" ], "Array.prototype.forEach(string)", n);
+    t(Array.prototype.forEach, [ void 0 ], "Array.prototype.forEach(undefined)", n);
+    t(Array.prototype.forEach, [ 1 ], "Array.prototype.forEach(number)", n);
     l.log("");
     l.log("");
     l.log("+++++++ The following should be OK. +++++++");
     l.log("");
-    var a = o(Array.prototype.forEach, [ c ], "Array.prototype.forEach(callback)", n);
+    var a = t(Array.prototype.forEach, [ c ], "Array.prototype.forEach(callback)", n);
     l.log(i);
     l.log(n);
     l.log("");
-}, /* 6 */
+}, /* 7 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -252,17 +291,17 @@ function(e, r, t) {
     l.log("");
     l.log("+++++++ The following should be OK. +++++++");
     l.log("");
-    var i = o(Array.prototype.indexOf, [ 0 ], "Array.prototype.indexOf(0) this -> testArray", n);
+    var i = t(Array.prototype.indexOf, [ 0 ], "Array.prototype.indexOf(0) this -> testArray", n);
     l.log(i);
-    var c = o(Array.prototype.indexOf, [ 0, 3 ], "Array.prototype.indexOf(0,3) this -> testArray", n);
+    var c = t(Array.prototype.indexOf, [ 0, 3 ], "Array.prototype.indexOf(0,3) this -> testArray", n);
     l.log(c);
     l.log(n);
     l.log("");
-}, /* 7 */
+}, /* 8 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -276,26 +315,26 @@ function(e, r, t) {
     l.log("");
     l.log("+++++++ The following should be OK. +++++++");
     l.log("");
-    var i = o(Array.isArray, [ "string" ], "Array.isArray(string)");
+    var i = t(Array.isArray, [ "string" ], "Array.isArray(string)");
     l.log(i);
-    var c = o(Array.isArray, [ void 0 ], "Array.isArray(undefined)");
+    var c = t(Array.isArray, [ void 0 ], "Array.isArray(undefined)");
     l.log(c);
-    var a = o(Array.isArray, [ 1 ], "Array.isArray(number)");
+    var a = t(Array.isArray, [ 1 ], "Array.isArray(number)");
     l.log(a);
-    var s = o(Array.isArray, [ null ], "Array.isArray(null)");
+    var s = t(Array.isArray, [ null ], "Array.isArray(null)");
     l.log(s);
-    var g = o(Array.isArray, [ function() {} ], "Array.isArray(function)");
+    var g = t(Array.isArray, [ function() {} ], "Array.isArray(function)");
     l.log(g);
-    var p = o(Array.isArray, [ {} ], "Array.isArray(object)");
+    var p = t(Array.isArray, [ {} ], "Array.isArray(object)");
     l.log(p);
-    var b = o(Array.isArray, [ n ], "Array.isArray(testArray)");
+    var b = t(Array.isArray, [ n ], "Array.isArray(testArray)");
     l.log(b);
     l.log("");
-}, /* 8 */
+}, /* 9 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -317,17 +356,17 @@ function(e, r, t) {
     l.log("");
     l.log("+++++++ The following should be OK. +++++++");
     l.log("");
-    var i = o(Array.prototype.lastIndexOf, [ 0 ], "Array.prototype.lastIndexOf(0) this -> testArray", n);
+    var i = t(Array.prototype.lastIndexOf, [ 0 ], "Array.prototype.lastIndexOf(0) this -> testArray", n);
     l.log(i);
-    var c = o(Array.prototype.lastIndexOf, [ 0, 3 ], "Array.prototype.lastIndexOf(0,3) this -> testArray", n);
+    var c = t(Array.prototype.lastIndexOf, [ 0, 3 ], "Array.prototype.lastIndexOf(0,3) this -> testArray", n);
     l.log(c);
     l.log(n);
     l.log("");
-}, /* 9 */
+}, /* 10 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -337,29 +376,29 @@ function(e, r, t) {
     } else {
         var l = window.console;
     }
-    var i = function(e, r, t) {
+    var i = function(e, r, o) {
         return -Math.abs(e);
     };
     l.log("================== Array.prototype.map ==================");
     l.log("");
     l.log("+++++++ The following should produce Error. +++++++");
     l.log("");
-    o(Array.prototype.map, [ "string" ], "Array.prototype.map(string)", n);
-    o(Array.prototype.map, [ void 0 ], "Array.prototype.map(undefined)", n);
-    o(Array.prototype.map, [ 1 ], "Array.prototype.map(number)", n);
+    t(Array.prototype.map, [ "string" ], "Array.prototype.map(string)", n);
+    t(Array.prototype.map, [ void 0 ], "Array.prototype.map(undefined)", n);
+    t(Array.prototype.map, [ 1 ], "Array.prototype.map(number)", n);
     l.log("");
     l.log("");
     l.log("+++++++ The following should be OK. +++++++");
     l.log("");
-    var c = o(Array.prototype.map, [ i ], "Array.prototype.map(callback)", n);
+    var c = t(Array.prototype.map, [ i ], "Array.prototype.map(callback)", n);
     l.log(c);
     l.log(n);
     l.log("");
-}, /* 10 */
+}, /* 11 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -369,34 +408,34 @@ function(e, r, t) {
     } else {
         var l = window.console;
     }
-    var i = function(e, r, t, o) {
+    var i = function(e, r, o, t) {
         return e + r;
     };
     l.log("================== Array.prototype.reduce ==================");
     l.log("");
     l.log("+++++++ The following should produce Error. +++++++");
     l.log("");
-    o(Array.prototype.reduce, [ "string" ], "Array.prototype.reduce(string)", n);
-    o(Array.prototype.reduce, [ void 0 ], "Array.prototype.reduce(undefined)", n);
-    o(Array.prototype.reduce, [ 1 ], "Array.prototype.reduce(number)", n);
+    t(Array.prototype.reduce, [ "string" ], "Array.prototype.reduce(string)", n);
+    t(Array.prototype.reduce, [ void 0 ], "Array.prototype.reduce(undefined)", n);
+    t(Array.prototype.reduce, [ 1 ], "Array.prototype.reduce(number)", n);
     //acceptParams(Array.prototype.reduce, callback, "Array.prototype.reduce(callback)", null);
     //acceptParams(Array.prototype.reduce, callback, "Array.prototype.reduce(callback)", void 0);
     l.log("");
     l.log("");
     l.log("+++++++ The following should be OK. +++++++");
     l.log("");
-    var c = o(Array.prototype.reduce, [ i ], "Array.prototype.reduce(callback)", n);
+    var c = t(Array.prototype.reduce, [ i ], "Array.prototype.reduce(callback)", n);
     l.log(c);
     l.log(n);
-    var a = o(Array.prototype.reduce, [ i, 24 ], "Array.prototype.reduce(callback,24)", n);
+    var a = t(Array.prototype.reduce, [ i, 24 ], "Array.prototype.reduce(callback,24)", n);
     l.log(a);
     l.log(n);
     l.log("");
-}, /* 11 */
+}, /* 12 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -406,34 +445,34 @@ function(e, r, t) {
     } else {
         var l = window.console;
     }
-    var i = function(e, r, t, o) {
+    var i = function(e, r, o, t) {
         return e + r;
     };
     l.log("================== Array.prototype.reduceRight ==================");
     l.log("");
     l.log("+++++++ The following should produce Error. +++++++");
     l.log("");
-    o(Array.prototype.reduceRight, [ "string" ], "Array.prototype.reduceRight(string)", n);
-    o(Array.prototype.reduceRight, [ void 0 ], "Array.prototype.reduceRight(undefined)", n);
-    o(Array.prototype.reduceRight, [ 1 ], "Array.prototype.reduceRight(number)", n);
+    t(Array.prototype.reduceRight, [ "string" ], "Array.prototype.reduceRight(string)", n);
+    t(Array.prototype.reduceRight, [ void 0 ], "Array.prototype.reduceRight(undefined)", n);
+    t(Array.prototype.reduceRight, [ 1 ], "Array.prototype.reduceRight(number)", n);
     //acceptParams(Array.prototype.reduceRight, callback, "Array.prototype.reduceRight(callback)", null);
     //acceptParams(Array.prototype.reduceRight, callback, "Array.prototype.reduceRight(callback)", void 0);
     l.log("");
     l.log("");
     l.log("+++++++ The following should be OK. +++++++");
     l.log("");
-    var c = o(Array.prototype.reduceRight, [ i ], "Array.prototype.reduceRight(callback)", n);
+    var c = t(Array.prototype.reduceRight, [ i ], "Array.prototype.reduceRight(callback)", n);
     l.log(c);
     l.log(n);
-    var a = o(Array.prototype.reduceRight, [ i, 24 ], "Array.prototype.reduceRight(callback,24)", n);
+    var a = t(Array.prototype.reduceRight, [ i, 24 ], "Array.prototype.reduceRight(callback,24)", n);
     l.log(a);
     l.log(n);
     l.log("");
-}, /* 12 */
+}, /* 13 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -443,31 +482,31 @@ function(e, r, t) {
     } else {
         var l = window.console;
     }
-    var i = function(e, r, t) {
+    var i = function(e, r, o) {
         return e < 0;
     };
     l.log("================== Array.prototype.some ==================");
     l.log("");
     l.log("+++++++ The following should produce Error. +++++++");
     l.log("");
-    o(Array.prototype.some, [ "string" ], "Array.prototype.some(string)", n);
-    o(Array.prototype.some, [ void 0 ], "Array.prototype.some(undefined)", n);
-    o(Array.prototype.some, [ 1 ], "Array.prototype.some(number)", n);
+    t(Array.prototype.some, [ "string" ], "Array.prototype.some(string)", n);
+    t(Array.prototype.some, [ void 0 ], "Array.prototype.some(undefined)", n);
+    t(Array.prototype.some, [ 1 ], "Array.prototype.some(number)", n);
     //acceptParams(Array.prototype.some, callback, "Array.prototype.some(callback)", null);
     //acceptParams(Array.prototype.some, callback, "Array.prototype.some(callback)", void 0);
     l.log("");
     l.log("");
     l.log("+++++++ The following should be OK. +++++++");
     l.log("");
-    var c = o(Array.prototype.some, [ i ], "Array.prototype.some(callback)", n);
+    var c = t(Array.prototype.some, [ i ], "Array.prototype.some(callback)", n);
     l.log(c);
     l.log(n);
     l.log("");
-}, /* 13 */
+}, /* 14 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
+function(e, r, o) {
+    var t = o(3).acceptParams;
+    var n = o(3).testArray;
     if ($.writeln !== void 0) {
         var l = {
             log: function(e) {
@@ -507,10 +546,10 @@ function(e, r, t) {
     l.log(c());
     // 81
     l.log("");
-}, /* 14 */
+}, /* 15 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -524,19 +563,19 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.create, [ "string" ], "Object.create(string)");
-    o(Object.create, [ void 0 ], "Object.create(undefined)");
-    o(Object.create, [ 1 ], "Object.create(number)");
+    t(Object.create, [ "string" ], "Object.create(string)");
+    t(Object.create, [ void 0 ], "Object.create(undefined)");
+    t(Object.create, [ 1 ], "Object.create(number)");
     n.log("");
-    o(Object.create, [ {}, {
+    t(Object.create, [ {}, {
         a: "string"
     } ], "Object.create(object, {a : string})");
-    o(Object.create, [ {}, {
+    t(Object.create, [ {}, {
         a: {
             set: function() {}
         }
     } ], "Object.create(object, {a : {set : function}})");
-    o(Object.create, [ {}, {
+    t(Object.create, [ {}, {
         a: {
             get: function() {}
         }
@@ -544,24 +583,24 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    o(Object.create, [ {} ], "Object.create(object)");
-    var l = o(Object.create, [ {}, {
+    t(Object.create, [ {} ], "Object.create(object)");
+    var l = t(Object.create, [ {}, {
         a: {
             value: 125
         }
     } ], "Object.create(object,  {a : {value : 125}})");
     n.log("     " + l.toSource());
-    o(Object.create, [ [ 1, 2, 3, 4, 5 ] ], "Object.create(array)");
-    o(Object.create, [ function() {} ], "Object.create(function)");
-    o(Object.create, [ new Date() ], "Object.create(date)");
-    o(Object.create, [ null ], "Object.create(null)");
+    t(Object.create, [ [ 1, 2, 3, 4, 5 ] ], "Object.create(array)");
+    t(Object.create, [ function() {} ], "Object.create(function)");
+    t(Object.create, [ new Date() ], "Object.create(date)");
+    t(Object.create, [ null ], "Object.create(null)");
     /*acceptParams(Object.create, [new File()], "Object.create(File)");
 	acceptParams(Object.create, [new Folder()], "Object.create(Folder)");*/
     n.log("");
-}, /* 15 */
+}, /* 16 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -575,24 +614,24 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.defineProperties, [ "string", {} ], "Object.defineProperties(string, object)");
-    o(Object.defineProperties, [ void 0, {} ], "Object.defineProperties(undefined, object)");
-    o(Object.defineProperties, [ 1, {} ], "Object.defineProperties(number, object)");
-    o(Object.defineProperties, [ null, {} ], "Object.defineProperties(null, object)");
-    o(Object.defineProperties, [ {} ], "Object.defineProperties(object)");
-    o(Object.defineProperties, [ [ 1, 2, 3, 4, 5 ], 1 ], "Object.defineProperties(array, number)");
-    o(Object.defineProperties, [ function() {}, "test" ], "Object.defineProperties(function, string)");
-    o(Object.defineProperties, [ new Date(), null ], "Object.defineProperties(date, null)");
+    t(Object.defineProperties, [ "string", {} ], "Object.defineProperties(string, object)");
+    t(Object.defineProperties, [ void 0, {} ], "Object.defineProperties(undefined, object)");
+    t(Object.defineProperties, [ 1, {} ], "Object.defineProperties(number, object)");
+    t(Object.defineProperties, [ null, {} ], "Object.defineProperties(null, object)");
+    t(Object.defineProperties, [ {} ], "Object.defineProperties(object)");
+    t(Object.defineProperties, [ [ 1, 2, 3, 4, 5 ], 1 ], "Object.defineProperties(array, number)");
+    t(Object.defineProperties, [ function() {}, "test" ], "Object.defineProperties(function, string)");
+    t(Object.defineProperties, [ new Date(), null ], "Object.defineProperties(date, null)");
     n.log("");
-    o(Object.defineProperties, [ {}, {
+    t(Object.defineProperties, [ {}, {
         a: "string"
     } ], "Object.defineProperties(object, {a : string})");
-    o(Object.defineProperties, [ {}, {
+    t(Object.defineProperties, [ {}, {
         a: {
             set: function() {}
         }
     } ], "Object.defineProperties(object, {a : {set : function}})");
-    o(Object.defineProperties, [ {}, {
+    t(Object.defineProperties, [ {}, {
         a: {
             get: function() {}
         }
@@ -600,7 +639,7 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    var l = o(Object.defineProperties, [ {}, {
+    var l = t(Object.defineProperties, [ {}, {
         a: {
             value: 125
         }
@@ -609,10 +648,10 @@ function(e, r, t) {
     /*acceptParams(Object.defineProperties, [new File(),{}], "Object.defineProperties(File, object)");
 	acceptParams(Object.defineProperties, [new Folder(),{}], "Object.defineProperties(Folder, object)");*/
     n.log("");
-}, /* 16 */
+}, /* 17 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -626,40 +665,40 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.defineProperty, [ "string", "prop", "string" ], "Object.defineProperty(string, string, string)");
-    o(Object.defineProperty, [ void 0, "prop", "string" ], "Object.defineProperty(undefined, string, string)");
-    o(Object.defineProperty, [ 1, "prop", "string" ], "Object.defineProperty(number, string, string)");
-    o(Object.defineProperty, [ null, "prop", "string" ], "Object.defineProperty(null, string, string)");
-    o(Object.defineProperty, [ {}, "prop", "string" ], "Object.defineProperty(object, string, string)");
-    o(Object.defineProperty, [ {}, "prop", void 0 ], "Object.defineProperty(object, string, undefined)");
-    o(Object.defineProperty, [ {}, "prop", 1 ], "Object.defineProperty(object, string, number)");
-    o(Object.defineProperty, [ {}, "prop", null ], "Object.defineProperty(object, string, null)");
-    o(Object.defineProperty, [ {}, "prop", {
+    t(Object.defineProperty, [ "string", "prop", "string" ], "Object.defineProperty(string, string, string)");
+    t(Object.defineProperty, [ void 0, "prop", "string" ], "Object.defineProperty(undefined, string, string)");
+    t(Object.defineProperty, [ 1, "prop", "string" ], "Object.defineProperty(number, string, string)");
+    t(Object.defineProperty, [ null, "prop", "string" ], "Object.defineProperty(null, string, string)");
+    t(Object.defineProperty, [ {}, "prop", "string" ], "Object.defineProperty(object, string, string)");
+    t(Object.defineProperty, [ {}, "prop", void 0 ], "Object.defineProperty(object, string, undefined)");
+    t(Object.defineProperty, [ {}, "prop", 1 ], "Object.defineProperty(object, string, number)");
+    t(Object.defineProperty, [ {}, "prop", null ], "Object.defineProperty(object, string, null)");
+    t(Object.defineProperty, [ {}, "prop", {
         set: function() {}
     } ], "Object.defineProperty(object, string, {set: function() {})");
-    o(Object.defineProperty, [ {}, "prop", {
+    t(Object.defineProperty, [ {}, "prop", {
         get: function() {}
     } ], "Object.defineProperty(object, string, {get: function() {})");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    var l = o(Object.defineProperty, [ {}, "prop", {
+    var l = t(Object.defineProperty, [ {}, "prop", {
         a: "test"
     } ], "Object.defineProperty(object, 'prop', {a: 'test'})");
     n.log("     " + l.toSource());
-    var i = o(Object.defineProperty, [ {}, "prop", {
+    var i = t(Object.defineProperty, [ {}, "prop", {
         value: "test"
     } ], "Object.defineProperty(object, 'prop', {value: 'test'})");
     n.log("     " + i.toSource());
-    var c = o(Object.defineProperty, [ [ 1, 2, 3, 4, 5 ], "prop", {
+    var c = t(Object.defineProperty, [ [ 1, 2, 3, 4, 5 ], "prop", {
         value: "test"
     } ], "Object.defineProperty(array, 'prop', {value: 'test'})");
     n.log("     " + c.prop);
-    var a = o(Object.defineProperty, [ function() {}, "prop", {
+    var a = t(Object.defineProperty, [ function() {}, "prop", {
         value: "test"
     } ], "Object.defineProperty(function, 'prop', {value: 'test'})");
     n.log("     " + a.prop);
-    var s = o(Object.defineProperty, [ new Date(), "prop", {
+    var s = t(Object.defineProperty, [ new Date(), "prop", {
         value: "test"
     } ], "Object.defineProperty(date, 'prop', {value: 'test'})");
     n.log("     " + s.prop);
@@ -668,10 +707,10 @@ function(e, r, t) {
 	}], "Object.defineProperty(file, 'prop', {value: 'test'})");
 	console.log("     " + r5.prop);*/
     n.log("");
-}, /* 17 */
+}, /* 18 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -685,24 +724,24 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.freeze, [ "string" ], "Object.freeze(string)");
-    o(Object.freeze, [ void 0 ], "Object.freeze(undefined)");
-    o(Object.freeze, [ 1 ], "Object.freeze(number)");
-    o(Object.freeze, [ null ], "Object.freeze(null)");
+    t(Object.freeze, [ "string" ], "Object.freeze(string)");
+    t(Object.freeze, [ void 0 ], "Object.freeze(undefined)");
+    t(Object.freeze, [ 1 ], "Object.freeze(number)");
+    t(Object.freeze, [ null ], "Object.freeze(null)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    o(Object.freeze, [ {} ], "Object.freeze(object)");
-    o(Object.freeze, [ [ 1, 2, 3, 4, 5 ] ], "Object.freeze(array)");
-    o(Object.freeze, [ function() {} ], "Object.freeze(function)");
-    o(Object.freeze, [ new Date() ], "Object.freeze(date)");
+    t(Object.freeze, [ {} ], "Object.freeze(object)");
+    t(Object.freeze, [ [ 1, 2, 3, 4, 5 ] ], "Object.freeze(array)");
+    t(Object.freeze, [ function() {} ], "Object.freeze(function)");
+    t(Object.freeze, [ new Date() ], "Object.freeze(date)");
     //acceptParams(Object.freeze, [new File()], "Object.freeze(File)");
     //acceptParams(Object.freeze, [new Folder()], "Object.freeze(Folder)");
     n.log("");
-}, /* 18 */
+}, /* 19 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -716,30 +755,30 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.getOwnPropertyDescriptor, [ "string", "prop" ], "Object.getOwnPropertyDescriptor(string, prop)");
-    o(Object.getOwnPropertyDescriptor, [ void 0, "prop" ], "Object.getOwnPropertyDescriptor(undefined, prop)");
-    o(Object.getOwnPropertyDescriptor, [ 1, "prop" ], "Object.getOwnPropertyDescriptor(number, prop)");
-    o(Object.getOwnPropertyDescriptor, [ null, "prop" ], "Object.getOwnPropertyDescriptor(null, prop)");
+    t(Object.getOwnPropertyDescriptor, [ "string", "prop" ], "Object.getOwnPropertyDescriptor(string, prop)");
+    t(Object.getOwnPropertyDescriptor, [ void 0, "prop" ], "Object.getOwnPropertyDescriptor(undefined, prop)");
+    t(Object.getOwnPropertyDescriptor, [ 1, "prop" ], "Object.getOwnPropertyDescriptor(number, prop)");
+    t(Object.getOwnPropertyDescriptor, [ null, "prop" ], "Object.getOwnPropertyDescriptor(null, prop)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    var l = o(Object.getOwnPropertyDescriptor, [ {}, "prop" ], "Object.getOwnPropertyDescriptor({}, string)");
+    var l = t(Object.getOwnPropertyDescriptor, [ {}, "prop" ], "Object.getOwnPropertyDescriptor({}, string)");
     n.log("     " + l);
-    var i = o(Object.getOwnPropertyDescriptor, [ {}, void 0 ], "Object.getOwnPropertyDescriptor({}, undefined)");
+    var i = t(Object.getOwnPropertyDescriptor, [ {}, void 0 ], "Object.getOwnPropertyDescriptor({}, undefined)");
     n.log("     " + i);
-    var c = o(Object.getOwnPropertyDescriptor, [ {}, 1 ], "Object.getOwnPropertyDescriptor({}, number)");
+    var c = t(Object.getOwnPropertyDescriptor, [ {}, 1 ], "Object.getOwnPropertyDescriptor({}, number)");
     n.log("     " + c);
-    var a = o(Object.getOwnPropertyDescriptor, [ {}, null ], "Object.getOwnPropertyDescriptor({}, null)");
+    var a = t(Object.getOwnPropertyDescriptor, [ {}, null ], "Object.getOwnPropertyDescriptor({}, null)");
     n.log("     " + a);
-    var s = o(Object.getOwnPropertyDescriptor, [ {
+    var s = t(Object.getOwnPropertyDescriptor, [ {
         a: 1
     }, "a" ], "Object.getOwnPropertyDescriptor({a:1}, 'a')");
     n.log("     " + s.toSource());
     n.log("");
-}, /* 19 */
+}, /* 20 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -753,26 +792,26 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.getOwnPropertyNames, [ "string" ], "Object.getOwnPropertyNames(string)");
-    o(Object.getOwnPropertyNames, [ void 0 ], "Object.getOwnPropertyNames(undefined)");
-    o(Object.getOwnPropertyNames, [ 1 ], "Object.getOwnPropertyNames(number)");
-    o(Object.getOwnPropertyNames, [ null ], "Object.getOwnPropertyNames(null)");
+    t(Object.getOwnPropertyNames, [ "string" ], "Object.getOwnPropertyNames(string)");
+    t(Object.getOwnPropertyNames, [ void 0 ], "Object.getOwnPropertyNames(undefined)");
+    t(Object.getOwnPropertyNames, [ 1 ], "Object.getOwnPropertyNames(number)");
+    t(Object.getOwnPropertyNames, [ null ], "Object.getOwnPropertyNames(null)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    o(Object.getOwnPropertyNames, [ {} ], "Object.getOwnPropertyNames(object)");
-    o(Object.getOwnPropertyNames, [ [ 1, 2, 3, 4, 5 ] ], "Object.getOwnPropertyNames(array)");
-    o(Object.getOwnPropertyNames, [ function() {} ], "Object.getOwnPropertyNames(function)");
-    o(Object.getOwnPropertyNames, [ new Date() ], "Object.getOwnPropertyNames(date)");
+    t(Object.getOwnPropertyNames, [ {} ], "Object.getOwnPropertyNames(object)");
+    t(Object.getOwnPropertyNames, [ [ 1, 2, 3, 4, 5 ] ], "Object.getOwnPropertyNames(array)");
+    t(Object.getOwnPropertyNames, [ function() {} ], "Object.getOwnPropertyNames(function)");
+    t(Object.getOwnPropertyNames, [ new Date() ], "Object.getOwnPropertyNames(date)");
     //acceptParams(Object.getOwnPropertyNames, [new File()], "Object.getOwnPropertyNames(File)");
     //acceptParams(Object.getOwnPropertyNames, [new Folder()], "Object.getOwnPropertyNames(Folder)");
-    var l = o(Object.getOwnPropertyNames, [ Math ], "Object.getOwnPropertyNames(Math)");
+    var l = t(Object.getOwnPropertyNames, [ Math ], "Object.getOwnPropertyNames(Math)");
     n.log("     " + l);
     n.log("");
-}, /* 20 */
+}, /* 21 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -786,27 +825,27 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.getPrototypeOf, [ "string" ], "Object.getPrototypeOf(string)");
-    o(Object.getPrototypeOf, [ void 0 ], "Object.getPrototypeOf(undefined)");
-    o(Object.getPrototypeOf, [ 1 ], "Object.getPrototypeOf(number)");
-    o(Object.getPrototypeOf, [ null ], "Object.getPrototypeOf(null)");
+    t(Object.getPrototypeOf, [ "string" ], "Object.getPrototypeOf(string)");
+    t(Object.getPrototypeOf, [ void 0 ], "Object.getPrototypeOf(undefined)");
+    t(Object.getPrototypeOf, [ 1 ], "Object.getPrototypeOf(number)");
+    t(Object.getPrototypeOf, [ null ], "Object.getPrototypeOf(null)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    o(Object.getPrototypeOf, [ {} ], "Object.getPrototypeOf(object)");
-    o(Object.getPrototypeOf, [ [ 1, 2, 3, 4, 5 ] ], "Object.getPrototypeOf(array)");
-    o(Object.getPrototypeOf, [ function() {} ], "Object.getPrototypeOf(function)");
-    o(Object.getPrototypeOf, [ new Date() ], "Object.getPrototypeOf(date)");
+    t(Object.getPrototypeOf, [ {} ], "Object.getPrototypeOf(object)");
+    t(Object.getPrototypeOf, [ [ 1, 2, 3, 4, 5 ] ], "Object.getPrototypeOf(array)");
+    t(Object.getPrototypeOf, [ function() {} ], "Object.getPrototypeOf(function)");
+    t(Object.getPrototypeOf, [ new Date() ], "Object.getPrototypeOf(date)");
     /*acceptParams(Object.getPrototypeOf, [new File()], "Object.getPrototypeOf(File)");
 	acceptParams(Object.getPrototypeOf, [new Folder()], "Object.getPrototypeOf(Folder)");
 	
 	var r = acceptParams(Object.getPrototypeOf, [new Folder()], "Object.getPrototypeOf(Folder)");
 	console.log("     " + r);*/
     n.log("");
-}, /* 21 */
+}, /* 22 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -820,30 +859,30 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.isExtensible, [ "string" ], "Object.isExtensible(string)");
-    o(Object.isExtensible, [ void 0 ], "Object.isExtensible(undefined)");
-    o(Object.isExtensible, [ 1 ], "Object.isExtensible(number)");
-    o(Object.isExtensible, [ null ], "Object.isExtensible(null)");
+    t(Object.isExtensible, [ "string" ], "Object.isExtensible(string)");
+    t(Object.isExtensible, [ void 0 ], "Object.isExtensible(undefined)");
+    t(Object.isExtensible, [ 1 ], "Object.isExtensible(number)");
+    t(Object.isExtensible, [ null ], "Object.isExtensible(null)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    var l = o(Object.isExtensible, [ {} ], "Object.isExtensible(object)");
+    var l = t(Object.isExtensible, [ {} ], "Object.isExtensible(object)");
     n.log("     " + l);
-    var i = o(Object.isExtensible, [ [ 1, 2, 3, 4, 5 ] ], "Object.isExtensible(array)");
+    var i = t(Object.isExtensible, [ [ 1, 2, 3, 4, 5 ] ], "Object.isExtensible(array)");
     n.log("     " + i);
-    var c = o(Object.isExtensible, [ function() {} ], "Object.isExtensible(function)");
+    var c = t(Object.isExtensible, [ function() {} ], "Object.isExtensible(function)");
     n.log("     " + c);
-    var a = o(Object.isExtensible, [ new Date() ], "Object.isExtensible(date)");
+    var a = t(Object.isExtensible, [ new Date() ], "Object.isExtensible(date)");
     n.log("     " + a);
     /*var r5 = acceptParams(Object.isExtensible, [new File()], "Object.isExtensible(File)");
 	console.log("     " + r5);
 	var r6 = acceptParams(Object.isExtensible, [new Folder()], "Object.isExtensible(Folder)");
 	console.log("     " + r6);*/
     n.log("");
-}, /* 22 */
+}, /* 23 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -857,30 +896,30 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.isFrozen, [ "string" ], "Object.isFrozen(string)");
-    o(Object.isFrozen, [ void 0 ], "Object.isFrozen(undefined)");
-    o(Object.isFrozen, [ 1 ], "Object.isFrozen(number)");
-    o(Object.isFrozen, [ null ], "Object.isFrozen(null)");
+    t(Object.isFrozen, [ "string" ], "Object.isFrozen(string)");
+    t(Object.isFrozen, [ void 0 ], "Object.isFrozen(undefined)");
+    t(Object.isFrozen, [ 1 ], "Object.isFrozen(number)");
+    t(Object.isFrozen, [ null ], "Object.isFrozen(null)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    var l = o(Object.isFrozen, [ {} ], "Object.isFrozen(object)");
+    var l = t(Object.isFrozen, [ {} ], "Object.isFrozen(object)");
     n.log("     " + l);
-    var i = o(Object.isFrozen, [ [ 1, 2, 3, 4, 5 ] ], "Object.isFrozen(array)");
+    var i = t(Object.isFrozen, [ [ 1, 2, 3, 4, 5 ] ], "Object.isFrozen(array)");
     n.log("     " + i);
-    var c = o(Object.isFrozen, [ function() {} ], "Object.isFrozen(function)");
+    var c = t(Object.isFrozen, [ function() {} ], "Object.isFrozen(function)");
     n.log("     " + c);
-    var a = o(Object.isFrozen, [ new Date() ], "Object.isFrozen(date)");
+    var a = t(Object.isFrozen, [ new Date() ], "Object.isFrozen(date)");
     n.log("     " + a);
     /*var r5 = acceptParams(Object.isFrozen, [new File()], "Object.isFrozen(File)");
 	console.log("     " + r5);
 	var r6 = acceptParams(Object.isFrozen, [new Folder()], "Object.isFrozen(Folder)");
 	console.log("     " + r6);*/
     n.log("");
-}, /* 23 */
+}, /* 24 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -894,30 +933,30 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.isSealed, [ "string" ], "Object.isSealed(string)");
-    o(Object.isSealed, [ void 0 ], "Object.isSealed(undefined)");
-    o(Object.isSealed, [ 1 ], "Object.isSealed(number)");
-    o(Object.isSealed, [ null ], "Object.isSealed(null)");
+    t(Object.isSealed, [ "string" ], "Object.isSealed(string)");
+    t(Object.isSealed, [ void 0 ], "Object.isSealed(undefined)");
+    t(Object.isSealed, [ 1 ], "Object.isSealed(number)");
+    t(Object.isSealed, [ null ], "Object.isSealed(null)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    var l = o(Object.isSealed, [ {} ], "Object.isSealed(object)");
+    var l = t(Object.isSealed, [ {} ], "Object.isSealed(object)");
     n.log("     " + l);
-    var i = o(Object.isSealed, [ [ 1, 2, 3, 4, 5 ] ], "Object.isSealed(array)");
+    var i = t(Object.isSealed, [ [ 1, 2, 3, 4, 5 ] ], "Object.isSealed(array)");
     n.log("     " + i);
-    var c = o(Object.isSealed, [ function() {} ], "Object.isSealed(function)");
+    var c = t(Object.isSealed, [ function() {} ], "Object.isSealed(function)");
     n.log("     " + c);
-    var a = o(Object.isSealed, [ new Date() ], "Object.isSealed(date)");
+    var a = t(Object.isSealed, [ new Date() ], "Object.isSealed(date)");
     n.log("     " + a);
     /*var r5 = acceptParams(Object.isSealed, [new File()], "Object.isSealed(File)");
 	console.log("     " + r5);
 	var r6 = acceptParams(Object.isSealed, [new Folder()], "Object.isSealed(Folder)");
 	console.log("     " + r6);*/
     n.log("");
-}, /* 24 */
+}, /* 25 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -931,29 +970,29 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.keys, [ "string" ], "Object.keys(string)");
-    o(Object.keys, [ void 0 ], "Object.keys(undefined)");
-    o(Object.keys, [ 1 ], "Object.keys(number)");
-    o(Object.keys, [ null ], "Object.keys(null)");
+    t(Object.keys, [ "string" ], "Object.keys(string)");
+    t(Object.keys, [ void 0 ], "Object.keys(undefined)");
+    t(Object.keys, [ 1 ], "Object.keys(number)");
+    t(Object.keys, [ null ], "Object.keys(null)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    o(Object.keys, [ {} ], "Object.keys(object)");
-    o(Object.keys, [ [ 1, 2, 3, 4, 5 ] ], "Object.keys(array)");
-    o(Object.keys, [ function() {} ], "Object.keys(function)");
-    o(Object.keys, [ new Date() ], "Object.keys(date)");
+    t(Object.keys, [ {} ], "Object.keys(object)");
+    t(Object.keys, [ [ 1, 2, 3, 4, 5 ] ], "Object.keys(array)");
+    t(Object.keys, [ function() {} ], "Object.keys(function)");
+    t(Object.keys, [ new Date() ], "Object.keys(date)");
     //acceptParams(Object.keys, [new File()], "Object.keys(File)");
     //acceptParams(Object.keys, [new Folder()], "Object.keys(Folder)");
-    var l = o(Object.keys, [ {
+    var l = t(Object.keys, [ {
         a: 1,
         b: 2
     } ], "Object.keys({a:1,b:2})");
     n.log("     " + l);
     n.log("");
-}, /* 25 */
+}, /* 26 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -967,24 +1006,24 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.preventExtensions, [ "string" ], "Object.preventExtensions(string)");
-    o(Object.preventExtensions, [ void 0 ], "Object.preventExtensions(undefined)");
-    o(Object.preventExtensions, [ 1 ], "Object.preventExtensions(number)");
-    o(Object.preventExtensions, [ null ], "Object.preventExtensions(null)");
+    t(Object.preventExtensions, [ "string" ], "Object.preventExtensions(string)");
+    t(Object.preventExtensions, [ void 0 ], "Object.preventExtensions(undefined)");
+    t(Object.preventExtensions, [ 1 ], "Object.preventExtensions(number)");
+    t(Object.preventExtensions, [ null ], "Object.preventExtensions(null)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    o(Object.preventExtensions, [ {} ], "Object.preventExtensions(object)");
-    o(Object.preventExtensions, [ [ 1, 2, 3, 4, 5 ] ], "Object.preventExtensions(array)");
-    o(Object.preventExtensions, [ function() {} ], "Object.preventExtensions(function)");
-    o(Object.preventExtensions, [ new Date() ], "Object.preventExtensions(date)");
+    t(Object.preventExtensions, [ {} ], "Object.preventExtensions(object)");
+    t(Object.preventExtensions, [ [ 1, 2, 3, 4, 5 ] ], "Object.preventExtensions(array)");
+    t(Object.preventExtensions, [ function() {} ], "Object.preventExtensions(function)");
+    t(Object.preventExtensions, [ new Date() ], "Object.preventExtensions(date)");
     //acceptParams(Object.preventExtensions, [new File()], "Object.preventExtensions(File)");
     //acceptParams(Object.preventExtensions, [new Folder()], "Object.preventExtensions(Folder)");
     n.log("");
-}, /* 26 */
+}, /* 27 */
 /***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
+function(e, r, o) {
+    var t = o(3).acceptParams;
     if ($.writeln !== void 0) {
         var n = {
             log: function(e) {
@@ -998,66 +1037,18 @@ function(e, r, t) {
     n.log("");
     n.log("+++++++ The following should produce Error. +++++++");
     n.log("");
-    o(Object.seal, [ "string" ], "Object.seal(string)");
-    o(Object.seal, [ void 0 ], "Object.seal(undefined)");
-    o(Object.seal, [ 1 ], "Object.seal(number)");
-    o(Object.seal, [ null ], "Object.seal(null)");
+    t(Object.seal, [ "string" ], "Object.seal(string)");
+    t(Object.seal, [ void 0 ], "Object.seal(undefined)");
+    t(Object.seal, [ 1 ], "Object.seal(number)");
+    t(Object.seal, [ null ], "Object.seal(null)");
     n.log("");
     n.log("+++++++ The following should be OK. +++++++");
     n.log("");
-    o(Object.seal, [ {} ], "Object.seal(object)");
-    o(Object.seal, [ [ 1, 2, 3, 4, 5 ] ], "Object.seal(array)");
-    o(Object.seal, [ function() {} ], "Object.seal(function)");
-    o(Object.seal, [ new Date() ], "Object.seal(date)");
+    t(Object.seal, [ {} ], "Object.seal(object)");
+    t(Object.seal, [ [ 1, 2, 3, 4, 5 ] ], "Object.seal(array)");
+    t(Object.seal, [ function() {} ], "Object.seal(function)");
+    t(Object.seal, [ new Date() ], "Object.seal(date)");
     //acceptParams(Object.seal, [new File()], "Object.seal(File)");
     //acceptParams(Object.seal, [new Folder()], "Object.seal(Folder)");
     n.log("");
-}, /* 27 */
-, /* 28 */
-, /* 29 */
-, /* 30 */
-, /* 31 */
-, /* 32 */
-, /* 33 */
-, /* 34 */
-, /* 35 */
-, /* 36 */
-, /* 37 */
-, /* 38 */
-, /* 39 */
-, /* 40 */
-, /* 41 */
-, /* 42 */
-, /* 43 */
-, /* 44 */
-, /* 45 */
-, /* 46 */
-, /* 47 */
-, /* 48 */
-, /* 49 */
-, /* 50 */
-, /* 51 */
-, /* 52 */
-, /* 53 */
-/***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
-    if ($.writeln !== void 0) {
-        var l = {
-            log: function(e) {
-                $.writeln(e);
-            }
-        };
-    } else {
-        var l = window.console;
-    }
-    l.log("================== String.prototype.trim ==================");
-    l.log("");
-    l.log("+++++++ The following should be OK. +++++++");
-    l.log("");
-    var i = "   foo  ";
-    l.log(i.trim());
-    // 'foo'
-    l.log("");
 } ]);

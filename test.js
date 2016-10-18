@@ -1,3 +1,23 @@
+if ($.writeln !== void 0) {
+	var console = {
+		log: function(obj) {
+			$.writeln(obj);
+		}
+	};
+} else {
+	var console = window.console;
+}
+
+console.log($.os);
+try {
+	console.log(app.name + ' ' + app.build);
+} catch (e) {
+	console.log(app.name + ' ' + app.version);
+}
+//console.log(app.name + ' ' + app.build || app.version);
+console.log('Javascript version ' + $.version);
+
+
 require('./test/String/trim.js')
 
 require('./test/Array/every.js')

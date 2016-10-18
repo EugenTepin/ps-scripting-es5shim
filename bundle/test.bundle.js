@@ -67,12 +67,28 @@
 })([ /* 0 */
 /***/
 function(e, r, t) {
-    t(27);
+    t(28);
     e.exports = t(1);
 }, /* 1 */
 /***/
 function(e, r, t) {
-    t(53);
+    if ($.writeln !== void 0) {
+        var o = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var o = window.console;
+    }
+    o.log($.os);
+    try {
+        o.log(app.name + " " + app.build);
+    } catch (n) {
+        o.log(app.name + " " + app.version);
+    }
+    //console.log(app.name + ' ' + app.build || app.version);
+    o.log("Javascript version " + $.version);
     t(2);
     t(4);
     t(5);
@@ -97,6 +113,7 @@ function(e, r, t) {
     t(24);
     t(25);
     t(26);
+    t(27);
 }, /* 2 */
 /***/
 function(e, r, t) {
@@ -111,25 +128,13 @@ function(e, r, t) {
     } else {
         var i = window.console;
     }
-    var l = function(e, r, t) {
-        return typeof e === "number";
-    };
-    i.log("================== Array.prototype.every ==================");
-    i.log("");
-    i.log("+++++++ The following should produce Error. +++++++");
-    i.log("");
-    o(Array.prototype.every, [ "string" ], "Array.prototype.every(string)", n);
-    o(Array.prototype.every, [ void 0 ], "Array.prototype.every(undefined)", n);
-    o(Array.prototype.every, [ 1 ], "Array.prototype.every(number)", n);
-    o(Array.prototype.every, l, "Array.prototype.every(callback)", null);
-    o(Array.prototype.every, l, "Array.prototype.every(callback)", void 0);
-    i.log("");
+    i.log("================== String.prototype.trim ==================");
     i.log("");
     i.log("+++++++ The following should be OK. +++++++");
     i.log("");
-    var c = o(Array.prototype.every, [ l ], "Array.prototype.every(callback)", n);
-    i.log(c);
-    i.log(n);
+    var l = "   foo  ";
+    i.log(l.trim());
+    // 'foo'
     i.log("");
 }, /* 3 */
 /***/
@@ -175,6 +180,40 @@ function(e, r, t) {
         var i = window.console;
     }
     var l = function(e, r, t) {
+        return typeof e === "number";
+    };
+    i.log("================== Array.prototype.every ==================");
+    i.log("");
+    i.log("+++++++ The following should produce Error. +++++++");
+    i.log("");
+    o(Array.prototype.every, [ "string" ], "Array.prototype.every(string)", n);
+    o(Array.prototype.every, [ void 0 ], "Array.prototype.every(undefined)", n);
+    o(Array.prototype.every, [ 1 ], "Array.prototype.every(number)", n);
+    o(Array.prototype.every, l, "Array.prototype.every(callback)", null);
+    o(Array.prototype.every, l, "Array.prototype.every(callback)", void 0);
+    i.log("");
+    i.log("");
+    i.log("+++++++ The following should be OK. +++++++");
+    i.log("");
+    var c = o(Array.prototype.every, [ l ], "Array.prototype.every(callback)", n);
+    i.log(c);
+    i.log(n);
+    i.log("");
+}, /* 5 */
+/***/
+function(e, r, t) {
+    var o = t(3).acceptParams;
+    var n = t(3).testArray;
+    if ($.writeln !== void 0) {
+        var i = {
+            log: function(e) {
+                $.writeln(e);
+            }
+        };
+    } else {
+        var i = window.console;
+    }
+    var l = function(e, r, t) {
         return e > 0;
     };
     i.log("================== Array.prototype.filter ==================");
@@ -194,7 +233,7 @@ function(e, r, t) {
     i.log(c);
     i.log(n);
     i.log("");
-}, /* 5 */
+}, /* 6 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -227,7 +266,7 @@ function(e, r, t) {
     i.log(l);
     i.log(n);
     i.log("");
-}, /* 6 */
+}, /* 7 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -259,7 +298,7 @@ function(e, r, t) {
     i.log(c);
     i.log(n);
     i.log("");
-}, /* 7 */
+}, /* 8 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -289,10 +328,10 @@ function(e, r, t) {
     i.log(s);
     var f = o(Array.isArray, [ {} ], "Array.isArray(object)");
     i.log(f);
-    var y = o(Array.isArray, [ n ], "Array.isArray(testArray)");
-    i.log(y);
+    var g = o(Array.isArray, [ n ], "Array.isArray(testArray)");
+    i.log(g);
     i.log("");
-}, /* 8 */
+}, /* 9 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -324,7 +363,7 @@ function(e, r, t) {
     i.log(c);
     i.log(n);
     i.log("");
-}, /* 9 */
+}, /* 10 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -356,7 +395,7 @@ function(e, r, t) {
     i.log(c);
     i.log(n);
     i.log("");
-}, /* 10 */
+}, /* 11 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -393,7 +432,7 @@ function(e, r, t) {
     i.log(a);
     i.log(n);
     i.log("");
-}, /* 11 */
+}, /* 12 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -430,7 +469,7 @@ function(e, r, t) {
     i.log(a);
     i.log(n);
     i.log("");
-}, /* 12 */
+}, /* 13 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -464,7 +503,7 @@ function(e, r, t) {
     i.log(c);
     i.log(n);
     i.log("");
-}, /* 13 */
+}, /* 14 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -508,7 +547,7 @@ function(e, r, t) {
     i.log(c());
     // 81
     i.log("");
-}, /* 14 */
+}, /* 15 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -559,7 +598,7 @@ function(e, r, t) {
     /*acceptParams(Object.create, [new File()], "Object.create(File)");
 	acceptParams(Object.create, [new Folder()], "Object.create(Folder)");*/
     n.log("");
-}, /* 15 */
+}, /* 16 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -610,7 +649,7 @@ function(e, r, t) {
     /*acceptParams(Object.defineProperties, [new File(),{}], "Object.defineProperties(File, object)");
 	acceptParams(Object.defineProperties, [new Folder(),{}], "Object.defineProperties(Folder, object)");*/
     n.log("");
-}, /* 16 */
+}, /* 17 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -669,7 +708,7 @@ function(e, r, t) {
 	}], "Object.defineProperty(file, 'prop', {value: 'test'})");
 	console.log("     " + r5.prop);*/
     n.log("");
-}, /* 17 */
+}, /* 18 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -700,7 +739,7 @@ function(e, r, t) {
     //acceptParams(Object.freeze, [new File()], "Object.freeze(File)");
     //acceptParams(Object.freeze, [new Folder()], "Object.freeze(Folder)");
     n.log("");
-}, /* 18 */
+}, /* 19 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -737,7 +776,7 @@ function(e, r, t) {
     }, "a" ], "Object.getOwnPropertyDescriptor({a:1}, 'a')");
     n.log("     " + p.toSource());
     n.log("");
-}, /* 19 */
+}, /* 20 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -770,7 +809,7 @@ function(e, r, t) {
     var i = o(Object.getOwnPropertyNames, [ Math ], "Object.getOwnPropertyNames(Math)");
     n.log("     " + i);
     n.log("");
-}, /* 20 */
+}, /* 21 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -804,7 +843,7 @@ function(e, r, t) {
 	var r = acceptParams(Object.getPrototypeOf, [new Folder()], "Object.getPrototypeOf(Folder)");
 	console.log("     " + r);*/
     n.log("");
-}, /* 21 */
+}, /* 22 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -841,7 +880,7 @@ function(e, r, t) {
 	var r6 = acceptParams(Object.isExtensible, [new Folder()], "Object.isExtensible(Folder)");
 	console.log("     " + r6);*/
     n.log("");
-}, /* 22 */
+}, /* 23 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -878,7 +917,7 @@ function(e, r, t) {
 	var r6 = acceptParams(Object.isFrozen, [new Folder()], "Object.isFrozen(Folder)");
 	console.log("     " + r6);*/
     n.log("");
-}, /* 23 */
+}, /* 24 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -915,7 +954,7 @@ function(e, r, t) {
 	var r6 = acceptParams(Object.isSealed, [new Folder()], "Object.isSealed(Folder)");
 	console.log("     " + r6);*/
     n.log("");
-}, /* 24 */
+}, /* 25 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -951,7 +990,7 @@ function(e, r, t) {
     } ], "Object.keys({a:1,b:2})");
     n.log("     " + i);
     n.log("");
-}, /* 25 */
+}, /* 26 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -982,7 +1021,7 @@ function(e, r, t) {
     //acceptParams(Object.preventExtensions, [new File()], "Object.preventExtensions(File)");
     //acceptParams(Object.preventExtensions, [new Folder()], "Object.preventExtensions(Folder)");
     n.log("");
-}, /* 26 */
+}, /* 27 */
 /***/
 function(e, r, t) {
     var o = t(3).acceptParams;
@@ -1013,7 +1052,7 @@ function(e, r, t) {
     //acceptParams(Object.seal, [new File()], "Object.seal(File)");
     //acceptParams(Object.seal, [new Folder()], "Object.seal(Folder)");
     n.log("");
-}, /* 27 */
+}, /* 28 */
 /***/
 function(e, r, t) {
     /*
@@ -1063,8 +1102,6 @@ function(e, r, t) {
 	
 	
 	*/
-    t(52);
-    t(28);
     t(29);
     t(30);
     t(31);
@@ -1088,7 +1125,21 @@ function(e, r, t) {
     t(49);
     t(50);
     t(51);
-}, /* 28 */
+    t(52);
+    t(53);
+}, /* 29 */
+/***/
+function(e, r) {
+    /*
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+	*/
+    if (!String.prototype.trim) {
+        // Вырезаем BOM и неразрывный пробел
+        String.prototype.trim = function() {
+            return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
+        };
+    }
+}, /* 30 */
 /***/
 function(e, r) {
     /*
@@ -1142,7 +1193,7 @@ function(e, r) {
             return true;
         };
     }
-}, /* 29 */
+}, /* 31 */
 /***/
 function(e, r) {
     /*
@@ -1176,7 +1227,7 @@ function(e, r) {
             return n;
         };
     }
-}, /* 30 */
+}, /* 32 */
 /***/
 function(e, r) {
     /*
@@ -1226,7 +1277,7 @@ function(e, r) {
             }
         };
     }
-}, /* 31 */
+}, /* 33 */
 /***/
 function(e, r) {
     /*
@@ -1287,7 +1338,7 @@ function(e, r) {
             return -1;
         };
     }
-}, /* 32 */
+}, /* 34 */
 /***/
 function(e, r) {
     /*
@@ -1301,7 +1352,7 @@ function(e, r) {
             return e.__class__ === "Array";
         };
     }
-}, /* 33 */
+}, /* 35 */
 /***/
 function(e, r) {
     /*
@@ -1335,7 +1386,7 @@ function(e, r) {
             return -1;
         };
     }
-}, /* 34 */
+}, /* 36 */
 /***/
 function(e, r) {
     /*
@@ -1405,7 +1456,7 @@ function(e, r) {
             return o;
         };
     }
-}, /* 35 */
+}, /* 37 */
 /***/
 function(e, r) {
     /*
@@ -1441,7 +1492,7 @@ function(e, r) {
             return i;
         };
     }
-}, /* 36 */
+}, /* 38 */
 /***/
 function(e, r) {
     /*
@@ -1477,7 +1528,7 @@ function(e, r) {
             return i;
         };
     }
-}, /* 37 */
+}, /* 39 */
 /***/
 function(e, r) {
     /*
@@ -1504,7 +1555,7 @@ function(e, r) {
             return false;
         };
     }
-}, /* 38 */
+}, /* 40 */
 /***/
 function(e, r) {
     /*
@@ -1529,7 +1580,7 @@ function(e, r) {
             return n;
         };
     }
-}, /* 39 */
+}, /* 41 */
 /***/
 function(e, r) {
     if (!Object.create) {
@@ -1580,7 +1631,7 @@ function(e, r) {
             };
         }();
     }
-}, /* 40 */
+}, /* 42 */
 /***/
 function(e, r) {
     /*
@@ -1632,7 +1683,7 @@ function(e, r) {
             return e;
         };
     }
-}, /* 41 */
+}, /* 43 */
 /***/
 function(e, r) {
     if (!Object.defineProperty) {
@@ -1664,7 +1715,7 @@ function(e, r) {
             return e;
         };
     }
-}, /* 42 */
+}, /* 44 */
 /***/
 function(e, r) {
     /*
@@ -1683,7 +1734,7 @@ function(e, r) {
             return e;
         };
     }
-}, /* 43 */
+}, /* 45 */
 /***/
 function(e, r) {
     if (!Object.getOwnPropertyDescriptor) {
@@ -1705,7 +1756,7 @@ function(e, r) {
             return t;
         };
     }
-}, /* 44 */
+}, /* 46 */
 /***/
 function(e, r) {
     if (!Object.getOwnPropertyNames) {
@@ -1723,7 +1774,7 @@ function(e, r) {
             return n;
         };
     }
-}, /* 45 */
+}, /* 47 */
 /***/
 function(e, r) {
     if (!Object.getPrototypeOf) {
@@ -1734,7 +1785,7 @@ function(e, r) {
             return e.__proto__;
         };
     }
-}, /* 46 */
+}, /* 48 */
 /***/
 function(e, r) {
     // ES5 15.2.3.13
@@ -1747,7 +1798,7 @@ function(e, r) {
             return true;
         };
     }
-}, /* 47 */
+}, /* 49 */
 /***/
 function(e, r) {
     /*
@@ -1763,7 +1814,7 @@ function(e, r) {
             return false;
         };
     }
-}, /* 48 */
+}, /* 50 */
 /***/
 function(e, r) {
     /*
@@ -1779,7 +1830,7 @@ function(e, r) {
             return false;
         };
     }
-}, /* 49 */
+}, /* 51 */
 /***/
 function(e, r) {
     /*
@@ -1805,7 +1856,7 @@ function(e, r) {
             };
         }();
     }
-}, /* 50 */
+}, /* 52 */
 /***/
 function(e, r) {
     /*
@@ -1824,7 +1875,7 @@ function(e, r) {
             return e;
         };
     }
-}, /* 51 */
+}, /* 53 */
 /***/
 function(e, r) {
     /*
@@ -1843,38 +1894,4 @@ function(e, r) {
             return e;
         };
     }
-}, /* 52 */
-/***/
-function(e, r) {
-    /*
-	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-	*/
-    if (!String.prototype.trim) {
-        // Вырезаем BOM и неразрывный пробел
-        String.prototype.trim = function() {
-            return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
-        };
-    }
-}, /* 53 */
-/***/
-function(e, r, t) {
-    var o = t(3).acceptParams;
-    var n = t(3).testArray;
-    if ($.writeln !== void 0) {
-        var i = {
-            log: function(e) {
-                $.writeln(e);
-            }
-        };
-    } else {
-        var i = window.console;
-    }
-    i.log("================== String.prototype.trim ==================");
-    i.log("");
-    i.log("+++++++ The following should be OK. +++++++");
-    i.log("");
-    var l = "   foo  ";
-    i.log(l.trim());
-    // 'foo'
-    i.log("");
 } ]);

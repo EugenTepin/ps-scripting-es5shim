@@ -67,7 +67,7 @@
 })([ /* 0 */
 /***/
 function(e, r, t) {
-    e.exports = t(27);
+    e.exports = t(28);
 }, /* 1 */
 , /* 2 */
 , /* 3 */
@@ -95,6 +95,7 @@ function(e, r, t) {
 , /* 25 */
 , /* 26 */
 , /* 27 */
+, /* 28 */
 /***/
 function(e, r, t) {
     /*
@@ -144,8 +145,6 @@ function(e, r, t) {
 	
 	
 	*/
-    t(52);
-    t(28);
     t(29);
     t(30);
     t(31);
@@ -169,7 +168,21 @@ function(e, r, t) {
     t(49);
     t(50);
     t(51);
-}, /* 28 */
+    t(52);
+    t(53);
+}, /* 29 */
+/***/
+function(e, r) {
+    /*
+	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+	*/
+    if (!String.prototype.trim) {
+        // Вырезаем BOM и неразрывный пробел
+        String.prototype.trim = function() {
+            return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
+        };
+    }
+}, /* 30 */
 /***/
 function(e, r) {
     /*
@@ -223,7 +236,7 @@ function(e, r) {
             return true;
         };
     }
-}, /* 29 */
+}, /* 31 */
 /***/
 function(e, r) {
     /*
@@ -257,7 +270,7 @@ function(e, r) {
             return o;
         };
     }
-}, /* 30 */
+}, /* 32 */
 /***/
 function(e, r) {
     /*
@@ -307,7 +320,7 @@ function(e, r) {
             }
         };
     }
-}, /* 31 */
+}, /* 33 */
 /***/
 function(e, r) {
     /*
@@ -368,7 +381,7 @@ function(e, r) {
             return -1;
         };
     }
-}, /* 32 */
+}, /* 34 */
 /***/
 function(e, r) {
     /*
@@ -382,7 +395,7 @@ function(e, r) {
             return e.__class__ === "Array";
         };
     }
-}, /* 33 */
+}, /* 35 */
 /***/
 function(e, r) {
     /*
@@ -416,7 +429,7 @@ function(e, r) {
             return -1;
         };
     }
-}, /* 34 */
+}, /* 36 */
 /***/
 function(e, r) {
     /*
@@ -486,7 +499,7 @@ function(e, r) {
             return n;
         };
     }
-}, /* 35 */
+}, /* 37 */
 /***/
 function(e, r) {
     /*
@@ -522,7 +535,7 @@ function(e, r) {
             return i;
         };
     }
-}, /* 36 */
+}, /* 38 */
 /***/
 function(e, r) {
     /*
@@ -558,7 +571,7 @@ function(e, r) {
             return i;
         };
     }
-}, /* 37 */
+}, /* 39 */
 /***/
 function(e, r) {
     /*
@@ -585,7 +598,7 @@ function(e, r) {
             return false;
         };
     }
-}, /* 38 */
+}, /* 40 */
 /***/
 function(e, r) {
     /*
@@ -610,7 +623,7 @@ function(e, r) {
             return o;
         };
     }
-}, /* 39 */
+}, /* 41 */
 /***/
 function(e, r) {
     if (!Object.create) {
@@ -661,7 +674,7 @@ function(e, r) {
             };
         }();
     }
-}, /* 40 */
+}, /* 42 */
 /***/
 function(e, r) {
     /*
@@ -713,7 +726,7 @@ function(e, r) {
             return e;
         };
     }
-}, /* 41 */
+}, /* 43 */
 /***/
 function(e, r) {
     if (!Object.defineProperty) {
@@ -745,7 +758,7 @@ function(e, r) {
             return e;
         };
     }
-}, /* 42 */
+}, /* 44 */
 /***/
 function(e, r) {
     /*
@@ -764,7 +777,7 @@ function(e, r) {
             return e;
         };
     }
-}, /* 43 */
+}, /* 45 */
 /***/
 function(e, r) {
     if (!Object.getOwnPropertyDescriptor) {
@@ -786,7 +799,7 @@ function(e, r) {
             return t;
         };
     }
-}, /* 44 */
+}, /* 46 */
 /***/
 function(e, r) {
     if (!Object.getOwnPropertyNames) {
@@ -804,7 +817,7 @@ function(e, r) {
             return o;
         };
     }
-}, /* 45 */
+}, /* 47 */
 /***/
 function(e, r) {
     if (!Object.getPrototypeOf) {
@@ -815,7 +828,7 @@ function(e, r) {
             return e.__proto__;
         };
     }
-}, /* 46 */
+}, /* 48 */
 /***/
 function(e, r) {
     // ES5 15.2.3.13
@@ -828,7 +841,7 @@ function(e, r) {
             return true;
         };
     }
-}, /* 47 */
+}, /* 49 */
 /***/
 function(e, r) {
     /*
@@ -844,7 +857,7 @@ function(e, r) {
             return false;
         };
     }
-}, /* 48 */
+}, /* 50 */
 /***/
 function(e, r) {
     /*
@@ -860,7 +873,7 @@ function(e, r) {
             return false;
         };
     }
-}, /* 49 */
+}, /* 51 */
 /***/
 function(e, r) {
     /*
@@ -886,7 +899,7 @@ function(e, r) {
             };
         }();
     }
-}, /* 50 */
+}, /* 52 */
 /***/
 function(e, r) {
     /*
@@ -905,7 +918,7 @@ function(e, r) {
             return e;
         };
     }
-}, /* 51 */
+}, /* 53 */
 /***/
 function(e, r) {
     /*
@@ -922,18 +935,6 @@ function(e, r) {
             // allows "securable" code to "gracefully" degrade to working
             // but insecure code.
             return e;
-        };
-    }
-}, /* 52 */
-/***/
-function(e, r) {
-    /*
-	https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-	*/
-    if (!String.prototype.trim) {
-        // Вырезаем BOM и неразрывный пробел
-        String.prototype.trim = function() {
-            return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
         };
     }
 } ]);
