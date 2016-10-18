@@ -18,13 +18,13 @@ All polyfills are independant, and could be used standalone.
 ### Basic usage
 Include full bundle in your code like this:
 
-```
+```js
 #include './node_modules/ps-scripting-es5shim/bundle/main.bundle.js'
 ```
 
 If you need a specific polyfill (for example Array.forEach and Object.create):
 
-```
+```js
 #includepath './node_modules/ps-scripting-es5shim/lib'
 #include './Array/forEach.js'
 #include './Object/create.js'
@@ -32,7 +32,7 @@ If you need a specific polyfill (for example Array.forEach and Object.create):
 ### Using with webpack as bundler
 
 content of webpack.config.js:
-```
+```js
 var webpack = require("webpack");
 
 module.exports = {
@@ -59,7 +59,7 @@ module.exports = {
 ```
 
 content of polyfill.js:
-```
+```js
 //if you want to include all shims
 require('ps-scripting-es5shim');
 
