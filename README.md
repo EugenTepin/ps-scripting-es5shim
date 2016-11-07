@@ -94,14 +94,14 @@ Validates input and returns **TRUE, FALSE, FALSE, respectively** if input parame
 ### create
 Support of property descriptor is in the same level as in _**defineProperty**_. Although, you can use this function in your code like this:
 
-```
+```js
 var obj1 = {a : 1};
 var obj2 = Object.create(obj1, {b : {value : 2}});
 ```
 
 or like that:
 
-```
+```js
 var obj1 = {a : 1};
 var obj2 = Object.create(obj1);
 obj2.b = 2;
@@ -116,5 +116,27 @@ Use _for in loop_ along with _hasOwnProperty_ function to get own enumerable pro
 ### getPrototypeOf
 Use build in `__proto__` property as return value.
 
+## Tests
 
-
+Application | Scripting engine | OS | Basic tests
+------------ | ------------- | ------------- | -------------
+Adobe Photoshop CS2 | ??? | Windows XP 5.1 Service Pack 3 | **FAIL!**
+Adobe Photoshop 12.0.3 | 4.1.26 | Windows XP 5.1 Service Pack 3 | OK!
+Adobe Photoshop 13.0 | 4.2.12 | Windows XP 5.1 Service Pack 3 | OK!
+Adobe Photoshop 13.0 | 4.2.12 | Windows 7/64 6.1 Service Pack 1 | OK!
+Adobe Photoshop 15.0 | 4.5.5 | Windows 7/64 6.1 Service Pack 1 | OK!
+Adobe Photoshop 16.1.2 | 4.5.6 | Macintosh OS 10.11.6/64 | OK!
+Adobe Photoshop 17.0.1 | 4.5.6 | Macintosh OS 10.11.6/64 | OK!
+Adobe Illustrator CS2 | ??? | Windows XP 5.1 Service Pack 3 | **FAIL!**
+Adobe Illustrator 15 | 4.1.21 | Windows XP 5.1 Service Pack 3 | OK!
+Adobe Illustrator 16.032 | 4.2.12 | Windows XP 5.1 Service Pack 3 | OK!
+Adobe Illustrator 17.1.0 | 4.5.5 | Macintosh OS 10.11.6/64 | OK!
+Adobe Illustrator 18.0.0 | 4.5.5 | Macintosh OS 10.11.6/64 | OK!
+Adobe Illustrator 18.1.1 | 4.5.5 | Macintosh OS 10.11.6/64 | OK!
+Adobe Illustrator 18.1.1 | 4.5.5 | Windows/64 10.0 Enterprise VM | OK!
+Adobe Illustrator 19.1.0 | 4.5.6 | Macintosh OS 10.11.6/64 | OK!
+Adobe Illustrator 19.2.1 | 4.5.6 | Windows/64 10.0 Enterprise VM | OK!
+Adobe Illustrator 20.0.0 | 4.5.6 | Windows/64 10.0 Enterprise VM | OK!
+Adobe Illustrator 20.1.0 | 4.5.6 | Macintosh OS 10.11.6/64 | OK!
+Adobe Bridge CS6 | 4.2.12 | Windows XP 5.1 Service Pack 3 | OK!
+Adobe Bridge CS5 | 4.1.23 | Windows XP 5.1 Service Pack 3 | OK!
