@@ -74,7 +74,7 @@ require('ps-scripting-es5shim/lib/Object/create.js');
 All polyfills could be used in your code.
 
 ## Object notes
-Because it is impossibule to emulate property descriptors in ES3 engine, the following functions are just a mocks and you should avoid to use them in your code if it is possible, only shim thirdparty libraries:
+Because it is impossible to emulate property descriptors in ES3 engine, the following functions are just a mocks and you should avoid to use them in your code if it is possible, only shim thirdparty libraries:
 	
 ### defineProperty, defineProperties
 Supports only **_data descriptor_**. **_Writable_**, **_enumerable_** and **_configurable_** properties of descriptor are ignored. If you try to define **_set_** or **_get_** propperty this methods will throw an error. 
