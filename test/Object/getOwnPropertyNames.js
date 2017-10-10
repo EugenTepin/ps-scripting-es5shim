@@ -1,12 +1,12 @@
 var acceptParams = require('../helper.js').acceptParams;
 if ($.writeln !== void 0) {
-	var console = {
-		log: function(obj) {
-			$.writeln(obj);
-		}
-	};
+    var console = {
+        log: function(obj) {
+            $.writeln(obj);
+        }
+    };
 } else {
-	var console = window.console;
+    var console = window.console;
 }
 
 console.log("================== Object.getOwnPropertyNames ==================");
@@ -24,9 +24,9 @@ console.log("");
 console.log("+++++++ The following should be OK. +++++++");
 console.log("");
 
-acceptParams(Object.getOwnPropertyNames, [{}], "Object.getOwnPropertyNames(object)");
+acceptParams(Object.getOwnPropertyNames, [{ a: 1 }], "Object.getOwnPropertyNames(object)");
 acceptParams(Object.getOwnPropertyNames, [
-	[1, 2, 3, 4, 5]
+    [1, 2, 3, 4, 5]
 ], "Object.getOwnPropertyNames(array)");
 acceptParams(Object.getOwnPropertyNames, [function() {}], "Object.getOwnPropertyNames(function)");
 acceptParams(Object.getOwnPropertyNames, [new Date()], "Object.getOwnPropertyNames(date)");

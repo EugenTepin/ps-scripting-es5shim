@@ -1,29 +1,30 @@
 if ($.writeln !== void 0) {
-	var console = {
-		log: function(obj) {
-			$.writeln(obj);
-		}
-	};
+    var console = {
+        log: function(obj) {
+            $.writeln(obj);
+        }
+    };
 } else {
-	var console = window.console;
+    var console = window.console;
 }
 
 
 
 module.exports.acceptParams = function(func, params, name, thisParam) {
-	var output;
-	try {
-		output = func.apply(thisParam, params);
-		var result = true;
-	} catch (e) {
-		var result = false;
-	}
-	if (result) {
-		console.log(name + " [OK]");
-	} else {
-		console.log(name + " [Error]");
-	}
-	return output;
+    var output;
+    try {
+        output = func.apply(thisParam, params);
+        var result = true;
+    } catch (e) {
+        var result = false;
+        console.log("         " + e);
+    }
+    if (result) {
+        console.log(name + " [OK]");
+    } else {
+        console.log(name + " [Error]");
+    }
+    return output;
 }
 
 
